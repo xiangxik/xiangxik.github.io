@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>程序员自我修养</title>
+  <subtitle>个人博客 | 孔祥溪</subtitle>
+  <link href="//atom.xml" rel="self"/>
+  
+  <link href="http://xiangxik.github.io/"/>
+  <updated>2016-02-20T09:42:10.053Z</updated>
+  <id>http://xiangxik.github.io/</id>
+  
+  <author>
+    <name>孔祥溪</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>《Ext JS 6 By Example》翻译 章节1. 开始使用</title>
+    <link href="http://xiangxik.github.io/2016/01/30/extjs6_1start/"/>
+    <id>http://xiangxik.github.io/2016/01/30/extjs6_1start/</id>
+    <published>2016-01-30T10:05:16.000Z</published>
+    <updated>2016-02-20T09:42:10.053Z</updated>
+    
+    <content type="html">&lt;p&gt;当你留意到这个文章时，你应该接触过javascript，甚至熟练运用javascript。javascript是一个伟大的、强大的语言。但是随着web应用变得越来越大，我们发现很难去维护javascript的代码。因此，javascript显得十分困难和消耗时间。&lt;/p&gt;
+&lt;p&gt;伴随着javascript框架的出现，包括客户端javascript框架和服务端javascript框架，extjs是客户端javascript框架之一。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;br&gt;本章节主要是extjs的基本介绍，和使用一些必要的工具，搭建extjs的开发环境。我们将讨论以下话题：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;extjs的优点&lt;/li&gt;
+&lt;li&gt;extjs的介绍&lt;/li&gt;
+&lt;li&gt;安装extjs和Sencha Cmd&lt;/li&gt;
+&lt;li&gt;使用Sencha Cmd搭建extjs应用程序&lt;/li&gt;
+&lt;li&gt;应用程序的架构&lt;/li&gt;
+&lt;li&gt;探索Sencha Cmd的命令&lt;/li&gt;
+&lt;li&gt;调试Extjs应用程序&lt;/li&gt;
+&lt;li&gt;开发工具&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;u4E3A_u4EC0_u4E48_u4F7F_u7528Extjs&quot;&gt;&lt;a href=&quot;#u4E3A_u4EC0_u4E48_u4F7F_u7528Extjs&quot; class=&quot;headerlink&quot; title=&quot;为什么使用Extjs&quot;&gt;&lt;/a&gt;为什么使用Extjs&lt;/h2&gt;&lt;p&gt;在web应用程序下，使用extjs有以下优点：&lt;/p&gt;
+&lt;h3 id=&quot;u652F_u6301_u8DE8_u6D4F_u89C8_u5668&quot;&gt;&lt;a href=&quot;#u652F_u6301_u8DE8_u6D4F_u89C8_u5668&quot; class=&quot;headerlink&quot; title=&quot;支持跨浏览器&quot;&gt;&lt;/a&gt;支持跨浏览器&lt;/h3&gt;&lt;p&gt;你可能会花上几个小时甚至几天时间去解决跨浏览器的bug，而没有把精力花费到解决你的业务逻辑上。然而，一个好的javascript框架，像extjs，它帮我们解决了这个任务，让我们把精力关注到我们的业务逻辑上。&lt;/p&gt;
+&lt;h3 id=&quot;u5BCCUI_u7EC4_u4EF6&quot;&gt;&lt;a href=&quot;#u5BCCUI_u7EC4_u4EF6&quot; class=&quot;headerlink&quot; title=&quot;富UI组件&quot;&gt;&lt;/a&gt;富UI组件&lt;/h3&gt;&lt;p&gt;extjs包含大量的富UI组件，譬如data grid、tab、panels、tree controls、date picker、charts等，它们会节省你大量的开发时间。&lt;/p&gt;
+&lt;h3 id=&quot;u53CC_u5411_u6570_u636E_u7ED1_u5B9A&quot;&gt;&lt;a href=&quot;#u53CC_u5411_u6570_u636E_u7ED1_u5B9A&quot; class=&quot;headerlink&quot; title=&quot;双向数据绑定&quot;&gt;&lt;/a&gt;双向数据绑定&lt;/h3&gt;&lt;p&gt;双向数据绑定意思是：当视图的数据改变，你的模型会自动改变。同样的，当你的应用更新了模型，视图的关联数据也会自动的改变。&lt;br&gt;举个列子，编辑页面。当你加载页面的时候，你需要把模型的数据展示成html，当用户在视图上修改数据时，你需要更新你的模型，但如果你使用了extjs，extjs自动地帮你完成，你将不需要做任何操作。&lt;/p&gt;
+&lt;h3 id=&quot;javascript_u6784_u5EFA_u6A21_u5F0F&quot;&gt;&lt;a href=&quot;#javascript_u6784_u5EFA_u6A21_u5F0F&quot; class=&quot;headerlink&quot; title=&quot;javascript构建模式&quot;&gt;&lt;/a&gt;javascript构建模式&lt;/h3&gt;&lt;p&gt;随着越来越多的代码移到客户端，维护客户端javascript代码变得十分困难。由此产生的MVC(Model View Controller)/MVVM(Model View, View Model)架构使得客户端代码易于维护，在生产环境使用增长很快。MVC和MVVM将在后面解释。&lt;/p&gt;
+&lt;h3 id=&quot;u7B80_u5316_u590D_u6742_u7684_u64CD_u4F5C&quot;&gt;&lt;a href=&quot;#u7B80_u5316_u590D_u6742_u7684_u64CD_u4F5C&quot; class=&quot;headerlink&quot; title=&quot;简化复杂的操作&quot;&gt;&lt;/a&gt;简化复杂的操作&lt;/h3&gt;&lt;p&gt;试想一下编辑一段ajax调用的javascript代码，并确保其在所有的浏览器中运行正确。让我们看一下在其他javascript框架中ajax调用的源码。试想一下在纯javascript中创建一个复杂的控件譬如grid，并包含如分页、排序、过滤、分组、快捷键、可编辑等等功能。&lt;/p&gt;
+&lt;h3 id=&quot;u7B80_u5355_u7684dom_u8BBF_u95EE&quot;&gt;&lt;a href=&quot;#u7B80_u5355_u7684dom_u8BBF_u95EE&quot; class=&quot;headerlink&quot; title=&quot;简单的dom访问&quot;&gt;&lt;/a&gt;简单的dom访问&lt;/h3&gt;&lt;p&gt;在纯javasript中，你可以访问dom，但它是那么的复杂。&lt;/p&gt;
+&lt;h3 id=&quot;u5BA2_u6237_u7AEF_u8DEF_u7531&quot;&gt;&lt;a href=&quot;#u5BA2_u6237_u7AEF_u8DEF_u7531&quot; class=&quot;headerlink&quot; title=&quot;客户端路由&quot;&gt;&lt;/a&gt;客户端路由&lt;/h3&gt;&lt;p&gt;在许多web应用程序中，路由指根据url访问web页面并执行逻辑。路由可以在服务端也可以在客户端。通常，客户端路由是用于单页面应用。&lt;/p&gt;
+&lt;h2 id=&quot;extjs_u4ECB_u7ECD&quot;&gt;&lt;a href=&quot;#extjs_u4ECB_u7ECD&quot; class=&quot;headerlink&quot; title=&quot;extjs介绍&quot;&gt;&lt;/a&gt;extjs介绍&lt;/h2&gt;&lt;p&gt;extjs几乎是一个一站式的开发富UI应用的框架。它提供MVC、MMVM、双向绑定、跨浏览器兼容、路由、可扩展的富UI组件集合、图表等。extjs还拥有完整的api文档。extjs起源于一个第三方库YUI，它现在是Sencha公司的一个产品。&lt;br&gt;使用extjs，你将大部分都是写javascript代码，基本上你不用写html代码。extjs装载着大量的富UI组件可以节省你的开发时间。&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;当你留意到这个文章时，你应该接触过javascript，甚至熟练运用javascript。javascript是一个伟大的、强大的语言。但是随着web应用变得越来越大，我们发现很难去维护javascript的代码。因此，javascript显得十分困难和消耗时间。&lt;/p&gt;
+&lt;p&gt;伴随着javascript框架的出现，包括客户端javascript框架和服务端javascript框架，extjs是客户端javascript框架之一。&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="extjs6 by example" scheme="http://xiangxik.github.io/tags/extjs6-by-example/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>开篇</title>
+    <link href="http://xiangxik.github.io/2016/01/01/start/"/>
+    <id>http://xiangxik.github.io/2016/01/01/start/</id>
+    <published>2015-12-31T16:05:50.000Z</published>
+    <updated>2016-01-30T16:13:07.596Z</updated>
+    
+    <content type="html">&lt;p&gt;第一篇博客。在2016年的第一天。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;今年的几个目标&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;完成2个以上中型项目。&lt;/li&gt;
+&lt;li&gt;完善web框架。&lt;/li&gt;
+&lt;li&gt;完善app框架。&lt;/li&gt;
+&lt;li&gt;获得融资，进行产品研发。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;第一篇博客。在2016年的第一天。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;今年的几个目标&lt;br&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
