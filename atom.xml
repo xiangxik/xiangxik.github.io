@@ -5,7 +5,7 @@
   <link href="//atom.xml" rel="self"/>
   
   <link href="http://xiangxik.github.io/"/>
-  <updated>2016-02-28T14:19:37.365Z</updated>
+  <updated>2016-02-28T14:31:40.072Z</updated>
   <id>http://xiangxik.github.io/</id>
   
   <author>
@@ -16,48 +16,31 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>CentOS6.5使用rpm安装最新版本Java</title>
-    <link href="http://xiangxik.github.io/2016/02/28/centos6.5_rpm_java/"/>
-    <id>http://xiangxik.github.io/2016/02/28/centos6.5_rpm_java/</id>
-    <published>2016-02-28T14:03:28.000Z</published>
-    <updated>2016-02-28T14:19:37.365Z</updated>
-    
-    <content type="html">&lt;h2 id=&quot;1-_u4E0B_u8F7D_u6700_u65B0_u7248_u672C_u7684java&quot;&gt;&lt;a href=&quot;#1-_u4E0B_u8F7D_u6700_u65B0_u7248_u672C_u7684java&quot; class=&quot;headerlink&quot; title=&quot;1.下载最新版本的java&quot;&gt;&lt;/a&gt;1.下载最新版本的java&lt;/h2&gt;&lt;p&gt;下载地址：&lt;a href=&quot;http://www.oracle.com/technetwork/java/javase/downloads/index.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.oracle.com/technetwork/java/javase/downloads/index.html&lt;/a&gt;&lt;br&gt;可得文件：jdk-8u73-linux-x64.rpm&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&quot;2-_u4E0A_u4F20_u5230CentOS_u7684_u67D0_u4E2A_u76EE_u5F55_u4E0B&quot;&gt;&lt;a href=&quot;#2-_u4E0A_u4F20_u5230CentOS_u7684_u67D0_u4E2A_u76EE_u5F55_u4E0B&quot; class=&quot;headerlink&quot; title=&quot;2.上传到CentOS的某个目录下&quot;&gt;&lt;/a&gt;2.上传到CentOS的某个目录下&lt;/h2&gt;&lt;h2 id=&quot;3-_u68C0_u67E5_u7CFB_u7EDF_u539F_u6709_u7248_u672C&quot;&gt;&lt;a href=&quot;#3-_u68C0_u67E5_u7CFB_u7EDF_u539F_u6709_u7248_u672C&quot; class=&quot;headerlink&quot; title=&quot;3.检查系统原有版本&quot;&gt;&lt;/a&gt;3.检查系统原有版本&lt;/h2&gt;&lt;p&gt;java version&lt;br&gt;如无任何版本，则直接进行第6步&lt;/p&gt;
-&lt;h2 id=&quot;4-__u67E5_u770Bjdk_u4FE1_u606F&quot;&gt;&lt;a href=&quot;#4-__u67E5_u770Bjdk_u4FE1_u606F&quot; class=&quot;headerlink&quot; title=&quot;4. 查看jdk信息&quot;&gt;&lt;/a&gt;4. 查看jdk信息&lt;/h2&gt;&lt;p&gt;[root@kxx ~]# rpm - qa | grep java&lt;br&gt;tzdata-java-2014g-1.el6.noarch&lt;br&gt;java-1.6.0-openjdk-1.6.0.0-11.1.13.4.el6.x86_64&lt;br&gt;java-1.7.0-openjdk-1.7.0.65-2.5.1.2.el6_5.x86_64&lt;/p&gt;
-&lt;h2 id=&quot;5-_u5378_u8F7D_u539F_u6709jdk&quot;&gt;&lt;a href=&quot;#5-_u5378_u8F7D_u539F_u6709jdk&quot; class=&quot;headerlink&quot; title=&quot;5.卸载原有jdk&quot;&gt;&lt;/a&gt;5.卸载原有jdk&lt;/h2&gt;&lt;p&gt;[root@kxx ~]# rpm -e –nodeps tzdata-java-2014g-1.el6.noarch&lt;br&gt;[root@kxx ~]# rpm -e –nodeps java-1.6.0-openjdk-1.6.0.0-11.1.13.4.el6.x86_64&lt;br&gt;[root@kxx ~]# rpm -e –nodeps java-1.7.0-openjdk-1.7.0.65-2.5.1.2.el6_5.x86_64&lt;/p&gt;
-&lt;h2 id=&quot;6-_u5B89_u88C5jdk&quot;&gt;&lt;a href=&quot;#6-_u5B89_u88C5jdk&quot; class=&quot;headerlink&quot; title=&quot;6.安装jdk&quot;&gt;&lt;/a&gt;6.安装jdk&lt;/h2&gt;&lt;p&gt;[root@kxx ~]# rpm -ivh jdk-8u73-linux-x64.rpm&lt;/p&gt;
-&lt;h2 id=&quot;7-_u9A8C_u8BC1_u662F_u5426_u5B89_u88C5_u6210_u529F&quot;&gt;&lt;a href=&quot;#7-_u9A8C_u8BC1_u662F_u5426_u5B89_u88C5_u6210_u529F&quot; class=&quot;headerlink&quot; title=&quot;7.验证是否安装成功&quot;&gt;&lt;/a&gt;7.验证是否安装成功&lt;/h2&gt;&lt;p&gt;[root@kxx ~]# java -version&lt;br&gt;java version “1.8.0_73”&lt;br&gt;Java(TM) SE Runtime Environment (build 1.8.0_73-b02)&lt;br&gt;Java HotSpot(TM) 64-Bit Server VM (build 25.73-b02, mixed mode)&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;1-_u4E0B_u8F7D_u6700_u65B0_u7248_u672C_u7684java&quot;&gt;&lt;a href=&quot;#1-_u4E0B_u8F7D_u6700_u65B0_u7248_u672C_u7684java&quot; class=&quot;headerlink&quot; title=&quot;1.下载最新版本的java&quot;&gt;&lt;/a&gt;1.下载最新版本的java&lt;/h2&gt;&lt;p&gt;下载地址：&lt;a href=&quot;http://www.oracle.com/technetwork/java/javase/downloads/index.html&quot;&gt;http://www.oracle.com/technetwork/java/javase/downloads/index.html&lt;/a&gt;&lt;br&gt;可得文件：jdk-8u73-linux-x64.rpm&lt;br&gt;
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>CentOS6.5使用yum安装mysql</title>
-    <link href="http://xiangxik.github.io/2016/02/28/centos6.5_yum_mysql/"/>
-    <id>http://xiangxik.github.io/2016/02/28/centos6.5_yum_mysql/</id>
+    <title>CentOS6.5基本配置</title>
+    <link href="http://xiangxik.github.io/2016/02/28/centos6.5_base/"/>
+    <id>http://xiangxik.github.io/2016/02/28/centos6.5_base/</id>
     <published>2016-02-28T13:50:09.000Z</published>
-    <updated>2016-02-28T14:19:28.811Z</updated>
+    <updated>2016-02-28T14:31:40.072Z</updated>
     
-    <content type="html">&lt;h2 id=&quot;1-_u4F7F_u7528yum_u547D_u4EE4_uFF0C_u5B89_u88C5mysql_u670D_u52A1_u7AEF&quot;&gt;&lt;a href=&quot;#1-_u4F7F_u7528yum_u547D_u4EE4_uFF0C_u5B89_u88C5mysql_u670D_u52A1_u7AEF&quot; class=&quot;headerlink&quot; title=&quot;1.使用yum命令，安装mysql服务端&quot;&gt;&lt;/a&gt;1.使用yum命令，安装mysql服务端&lt;/h2&gt;&lt;p&gt;[root@kxx ~]# yum-y install mysql-server&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&quot;2-_u8BBE_u7F6E_u5F00_u673A_u542F_u52A8&quot;&gt;&lt;a href=&quot;#2-_u8BBE_u7F6E_u5F00_u673A_u542F_u52A8&quot; class=&quot;headerlink&quot; title=&quot;2.设置开机启动&quot;&gt;&lt;/a&gt;2.设置开机启动&lt;/h2&gt;&lt;p&gt;[root@kxx ~]# chkconfig mysqld on&lt;/p&gt;
-&lt;h2 id=&quot;3-_u542F_u52A8mysql_u670D_u52A1&quot;&gt;&lt;a href=&quot;#3-_u542F_u52A8mysql_u670D_u52A1&quot; class=&quot;headerlink&quot; title=&quot;3.启动mysql服务&quot;&gt;&lt;/a&gt;3.启动mysql服务&lt;/h2&gt;&lt;p&gt;[root@kxx ~]# service mysqld start&lt;/p&gt;
-&lt;h2 id=&quot;4-_u8BBE_u7F6Emysql_u7684root_u7528_u6237_u5BC6_u7801&quot;&gt;&lt;a href=&quot;#4-_u8BBE_u7F6Emysql_u7684root_u7528_u6237_u5BC6_u7801&quot; class=&quot;headerlink&quot; title=&quot;4.设置mysql的root用户密码&quot;&gt;&lt;/a&gt;4.设置mysql的root用户密码&lt;/h2&gt;&lt;p&gt;[root@kxx ~]# mysql -u root&lt;br&gt;mysql&amp;gt;select user,host,password from mysql.user;&lt;br&gt;mysql&amp;gt;set password for root@localhost=password(‘asd123’);&lt;br&gt;mysql&amp;gt;exit;&lt;/p&gt;
-&lt;h2 id=&quot;5-_u6709_u5BC6_u7801_u65F6_u767B_u5F55&quot;&gt;&lt;a href=&quot;#5-_u6709_u5BC6_u7801_u65F6_u767B_u5F55&quot; class=&quot;headerlink&quot; title=&quot;5.有密码时登录&quot;&gt;&lt;/a&gt;5.有密码时登录&lt;/h2&gt;&lt;p&gt;[root@kxx ~]# mysql -u root -p&lt;/p&gt;
-&lt;h2 id=&quot;6-_u8BBE_u7F6E_u8BBF_u95EE_u6743_u9650&quot;&gt;&lt;a href=&quot;#6-_u8BBE_u7F6E_u8BBF_u95EE_u6743_u9650&quot; class=&quot;headerlink&quot; title=&quot;6.设置访问权限&quot;&gt;&lt;/a&gt;6.设置访问权限&lt;/h2&gt;&lt;p&gt;mysql&amp;gt;GRANT ALL PRIVILEGES ON &lt;em&gt;.&lt;/em&gt; TO ‘root’@’%’ IDENTIFIED BY ‘qwe123’ WITH GRANT OPTION;&lt;br&gt;mysql&amp;gt;FLUSH PRIVILEGES;&lt;/p&gt;
-&lt;h2 id=&quot;7-_u57FA_u672C_u547D_u4EE4&quot;&gt;&lt;a href=&quot;#7-_u57FA_u672C_u547D_u4EE4&quot; class=&quot;headerlink&quot; title=&quot;7.基本命令&quot;&gt;&lt;/a&gt;7.基本命令&lt;/h2&gt;&lt;p&gt;show databases; //查看所有数据库&lt;br&gt;use databasename; //使用某个数据库&lt;br&gt;drop database databasename; //删除某个数据库&lt;br&gt;exit; //退出数据库连接&lt;br&gt;create database databasename; //创建数据库&lt;br&gt;show tables; //列出数据库下所有的表&lt;/p&gt;
+    <content type="html">&lt;p&gt;本文主要列出了CentOS6.5安装之后，需要部署项目要进行的一些基本的操作。下文所述的操作都是本人亲自测试可用的，而且都是十分方便简单的方法。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;br&gt;本文有很多处是从网上查找记录下来的，只为方便自己不用再东找西找。如作者有版权要求的，可直接联系本人，本人马上删除其部分内容。&lt;/p&gt;
+&lt;h2 id=&quot;u5B89_u88C5_u6700_u65B0_u7248_u672C_u7684Java&quot;&gt;&lt;a href=&quot;#u5B89_u88C5_u6700_u65B0_u7248_u672C_u7684Java&quot; class=&quot;headerlink&quot; title=&quot;安装最新版本的Java&quot;&gt;&lt;/a&gt;安装最新版本的Java&lt;/h2&gt;&lt;h3 id=&quot;1-_u4E0B_u8F7D_u6700_u65B0_u7248_u672C_u7684java&quot;&gt;&lt;a href=&quot;#1-_u4E0B_u8F7D_u6700_u65B0_u7248_u672C_u7684java&quot; class=&quot;headerlink&quot; title=&quot;1.下载最新版本的java&quot;&gt;&lt;/a&gt;1.下载最新版本的java&lt;/h3&gt;&lt;p&gt;下载地址：&lt;a href=&quot;http://www.oracle.com/technetwork/java/javase/downloads/index.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.oracle.com/technetwork/java/javase/downloads/index.html&lt;/a&gt;&lt;br&gt;可得文件：jdk-8u73-linux-x64.rpm&lt;/p&gt;
+&lt;h3 id=&quot;2-_u4E0A_u4F20_u5230CentOS_u7684_u67D0_u4E2A_u76EE_u5F55_u4E0B&quot;&gt;&lt;a href=&quot;#2-_u4E0A_u4F20_u5230CentOS_u7684_u67D0_u4E2A_u76EE_u5F55_u4E0B&quot; class=&quot;headerlink&quot; title=&quot;2.上传到CentOS的某个目录下&quot;&gt;&lt;/a&gt;2.上传到CentOS的某个目录下&lt;/h3&gt;&lt;h3 id=&quot;3-_u68C0_u67E5_u7CFB_u7EDF_u539F_u6709_u7248_u672C&quot;&gt;&lt;a href=&quot;#3-_u68C0_u67E5_u7CFB_u7EDF_u539F_u6709_u7248_u672C&quot; class=&quot;headerlink&quot; title=&quot;3.检查系统原有版本&quot;&gt;&lt;/a&gt;3.检查系统原有版本&lt;/h3&gt;&lt;p&gt;java version&lt;br&gt;如无任何版本，则直接进行第6步&lt;/p&gt;
+&lt;h3 id=&quot;4-__u67E5_u770Bjdk_u4FE1_u606F&quot;&gt;&lt;a href=&quot;#4-__u67E5_u770Bjdk_u4FE1_u606F&quot; class=&quot;headerlink&quot; title=&quot;4. 查看jdk信息&quot;&gt;&lt;/a&gt;4. 查看jdk信息&lt;/h3&gt;&lt;p&gt;[root@kxx ~]# rpm - qa | grep java&lt;br&gt;tzdata-java-2014g-1.el6.noarch&lt;br&gt;java-1.6.0-openjdk-1.6.0.0-11.1.13.4.el6.x86_64&lt;br&gt;java-1.7.0-openjdk-1.7.0.65-2.5.1.2.el6_5.x86_64&lt;/p&gt;
+&lt;h3 id=&quot;5-_u5378_u8F7D_u539F_u6709jdk&quot;&gt;&lt;a href=&quot;#5-_u5378_u8F7D_u539F_u6709jdk&quot; class=&quot;headerlink&quot; title=&quot;5.卸载原有jdk&quot;&gt;&lt;/a&gt;5.卸载原有jdk&lt;/h3&gt;&lt;p&gt;[root@kxx ~]# rpm -e –nodeps tzdata-java-2014g-1.el6.noarch&lt;br&gt;[root@kxx ~]# rpm -e –nodeps java-1.6.0-openjdk-1.6.0.0-11.1.13.4.el6.x86_64&lt;br&gt;[root@kxx ~]# rpm -e –nodeps java-1.7.0-openjdk-1.7.0.65-2.5.1.2.el6_5.x86_64&lt;/p&gt;
+&lt;h3 id=&quot;6-_u5B89_u88C5jdk&quot;&gt;&lt;a href=&quot;#6-_u5B89_u88C5jdk&quot; class=&quot;headerlink&quot; title=&quot;6.安装jdk&quot;&gt;&lt;/a&gt;6.安装jdk&lt;/h3&gt;&lt;p&gt;[root@kxx ~]# rpm -ivh jdk-8u73-linux-x64.rpm&lt;/p&gt;
+&lt;h3 id=&quot;7-_u9A8C_u8BC1_u662F_u5426_u5B89_u88C5_u6210_u529F&quot;&gt;&lt;a href=&quot;#7-_u9A8C_u8BC1_u662F_u5426_u5B89_u88C5_u6210_u529F&quot; class=&quot;headerlink&quot; title=&quot;7.验证是否安装成功&quot;&gt;&lt;/a&gt;7.验证是否安装成功&lt;/h3&gt;&lt;p&gt;[root@kxx ~]# java -version&lt;br&gt;java version “1.8.0_73”&lt;br&gt;Java(TM) SE Runtime Environment (build 1.8.0_73-b02)&lt;br&gt;Java HotSpot(TM) 64-Bit Server VM (build 25.73-b02, mixed mode)&lt;/p&gt;
+&lt;h2 id=&quot;u5B89_u88C5mysql&quot;&gt;&lt;a href=&quot;#u5B89_u88C5mysql&quot; class=&quot;headerlink&quot; title=&quot;安装mysql&quot;&gt;&lt;/a&gt;安装mysql&lt;/h2&gt;&lt;h3 id=&quot;1-_u4F7F_u7528yum_u547D_u4EE4_uFF0C_u5B89_u88C5mysql_u670D_u52A1_u7AEF&quot;&gt;&lt;a href=&quot;#1-_u4F7F_u7528yum_u547D_u4EE4_uFF0C_u5B89_u88C5mysql_u670D_u52A1_u7AEF&quot; class=&quot;headerlink&quot; title=&quot;1.使用yum命令，安装mysql服务端&quot;&gt;&lt;/a&gt;1.使用yum命令，安装mysql服务端&lt;/h3&gt;&lt;p&gt;[root@kxx ~]# yum-y install mysql-server&lt;/p&gt;
+&lt;h3 id=&quot;2-_u8BBE_u7F6E_u5F00_u673A_u542F_u52A8&quot;&gt;&lt;a href=&quot;#2-_u8BBE_u7F6E_u5F00_u673A_u542F_u52A8&quot; class=&quot;headerlink&quot; title=&quot;2.设置开机启动&quot;&gt;&lt;/a&gt;2.设置开机启动&lt;/h3&gt;&lt;p&gt;[root@kxx ~]# chkconfig mysqld on&lt;/p&gt;
+&lt;h3 id=&quot;3-_u542F_u52A8mysql_u670D_u52A1&quot;&gt;&lt;a href=&quot;#3-_u542F_u52A8mysql_u670D_u52A1&quot; class=&quot;headerlink&quot; title=&quot;3.启动mysql服务&quot;&gt;&lt;/a&gt;3.启动mysql服务&lt;/h3&gt;&lt;p&gt;[root@kxx ~]# service mysqld start&lt;/p&gt;
+&lt;h3 id=&quot;4-_u8BBE_u7F6Emysql_u7684root_u7528_u6237_u5BC6_u7801&quot;&gt;&lt;a href=&quot;#4-_u8BBE_u7F6Emysql_u7684root_u7528_u6237_u5BC6_u7801&quot; class=&quot;headerlink&quot; title=&quot;4.设置mysql的root用户密码&quot;&gt;&lt;/a&gt;4.设置mysql的root用户密码&lt;/h3&gt;&lt;p&gt;[root@kxx ~]# mysql -u root&lt;br&gt;mysql&amp;gt;select user,host,password from mysql.user;&lt;br&gt;mysql&amp;gt;set password for root@localhost=password(‘asd123’);&lt;br&gt;mysql&amp;gt;exit;&lt;/p&gt;
+&lt;h3 id=&quot;5-_u6709_u5BC6_u7801_u65F6_u767B_u5F55&quot;&gt;&lt;a href=&quot;#5-_u6709_u5BC6_u7801_u65F6_u767B_u5F55&quot; class=&quot;headerlink&quot; title=&quot;5.有密码时登录&quot;&gt;&lt;/a&gt;5.有密码时登录&lt;/h3&gt;&lt;p&gt;[root@kxx ~]# mysql -u root -p&lt;/p&gt;
+&lt;h3 id=&quot;6-_u8BBE_u7F6E_u8BBF_u95EE_u6743_u9650&quot;&gt;&lt;a href=&quot;#6-_u8BBE_u7F6E_u8BBF_u95EE_u6743_u9650&quot; class=&quot;headerlink&quot; title=&quot;6.设置访问权限&quot;&gt;&lt;/a&gt;6.设置访问权限&lt;/h3&gt;&lt;p&gt;mysql&amp;gt;GRANT ALL PRIVILEGES ON &lt;em&gt;.&lt;/em&gt; TO ‘root’@’%’ IDENTIFIED BY ‘qwe123’ WITH GRANT OPTION;&lt;br&gt;mysql&amp;gt;FLUSH PRIVILEGES;&lt;/p&gt;
+&lt;h3 id=&quot;7-_u57FA_u672C_u547D_u4EE4&quot;&gt;&lt;a href=&quot;#7-_u57FA_u672C_u547D_u4EE4&quot; class=&quot;headerlink&quot; title=&quot;7.基本命令&quot;&gt;&lt;/a&gt;7.基本命令&lt;/h3&gt;&lt;p&gt;show databases; //查看所有数据库&lt;br&gt;use databasename; //使用某个数据库&lt;br&gt;drop database databasename; //删除某个数据库&lt;br&gt;exit; //退出数据库连接&lt;br&gt;create database databasename; //创建数据库&lt;br&gt;show tables; //列出数据库下所有的表&lt;/p&gt;
 </content>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;1-_u4F7F_u7528yum_u547D_u4EE4_uFF0C_u5B89_u88C5mysql_u670D_u52A1_u7AEF&quot;&gt;&lt;a href=&quot;#1-_u4F7F_u7528yum_u547D_u4EE4_uFF0C_u5B89_u88C5mysql_u670D_u52A1_u7AEF&quot; class=&quot;headerlink&quot; title=&quot;1.使用yum命令，安装mysql服务端&quot;&gt;&lt;/a&gt;1.使用yum命令，安装mysql服务端&lt;/h2&gt;&lt;p&gt;[root@kxx ~]# yum-y install mysql-server&lt;br&gt;
+      &lt;p&gt;本文主要列出了CentOS6.5安装之后，需要部署项目要进行的一些基本的操作。下文所述的操作都是本人亲自测试可用的，而且都是十分方便简单的方法。&lt;br&gt;
     
     </summary>
     
