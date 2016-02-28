@@ -3,24 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>开篇 | 程序员自我修养</title>
+  <title>CentOS6.5使用rpm安装最新版本Java | 程序员自我修养</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="第一篇博客。在2016年的第一天。
-
-今年的几个目标">
+  <meta name="description" content="1.下载最新版本的java下载地址：http://www.oracle.com/technetwork/java/javase/downloads/index.html可得文件：jdk-8u73-linux-x64.rpm">
 <meta property="og:type" content="article">
-<meta property="og:title" content="开篇">
-<meta property="og:url" content="http://xiangxik.github.io/2016/01/01/start/index.html">
+<meta property="og:title" content="CentOS6.5使用rpm安装最新版本Java">
+<meta property="og:url" content="http://xiangxik.github.io/2016/02/28/centos6.5_rpm_java/index.html">
 <meta property="og:site_name" content="程序员自我修养">
-<meta property="og:description" content="第一篇博客。在2016年的第一天。
-
-今年的几个目标">
-<meta property="og:updated_time" content="2016-01-30T16:13:07.596Z">
+<meta property="og:description" content="1.下载最新版本的java下载地址：http://www.oracle.com/technetwork/java/javase/downloads/index.html可得文件：jdk-8u73-linux-x64.rpm">
+<meta property="og:updated_time" content="2016-02-28T14:19:37.365Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="开篇">
-<meta name="twitter:description" content="第一篇博客。在2016年的第一天。
-
-今年的几个目标">
+<meta name="twitter:title" content="CentOS6.5使用rpm安装最新版本Java">
+<meta name="twitter:description" content="1.下载最新版本的java下载地址：http://www.oracle.com/technetwork/java/javase/downloads/index.html可得文件：jdk-8u73-linux-x64.rpm">
   
     <link rel="alternative" href="/atom.xml" title="程序员自我修养" type="application/atom+xml">
   
@@ -243,11 +237,11 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-start" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-centos6.5_rpm_java" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/01/01/start/" class="article-date">
-      <time datetime="2015-12-31T16:05:50.000Z" itemprop="datePublished">2016-01-01</time>
+      <a href="/2016/02/28/centos6.5_rpm_java/" class="article-date">
+      <time datetime="2016-02-28T14:03:28.000Z" itemprop="datePublished">2016-02-28</time>
 </a>
     </div>
   
@@ -260,7 +254,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      开篇
+      CentOS6.5使用rpm安装最新版本Java
     </h1>
   
 
@@ -277,16 +271,12 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>第一篇博客。在2016年的第一天。</p>
-<blockquote>
-<p>今年的几个目标<br><a id="more"></a></p>
-<ol>
-<li>完成2个以上中型项目。</li>
-<li>完善web框架。</li>
-<li>完善app框架。</li>
-<li>获得融资，进行产品研发。</li>
-</ol>
-</blockquote>
+        <h2 id="1-_u4E0B_u8F7D_u6700_u65B0_u7248_u672C_u7684java"><a href="#1-_u4E0B_u8F7D_u6700_u65B0_u7248_u672C_u7684java" class="headerlink" title="1.下载最新版本的java"></a>1.下载最新版本的java</h2><p>下载地址：<a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank" rel="external">http://www.oracle.com/technetwork/java/javase/downloads/index.html</a><br>可得文件：jdk-8u73-linux-x64.rpm<br><a id="more"></a></p>
+<h2 id="2-_u4E0A_u4F20_u5230CentOS_u7684_u67D0_u4E2A_u76EE_u5F55_u4E0B"><a href="#2-_u4E0A_u4F20_u5230CentOS_u7684_u67D0_u4E2A_u76EE_u5F55_u4E0B" class="headerlink" title="2.上传到CentOS的某个目录下"></a>2.上传到CentOS的某个目录下</h2><h2 id="3-_u68C0_u67E5_u7CFB_u7EDF_u539F_u6709_u7248_u672C"><a href="#3-_u68C0_u67E5_u7CFB_u7EDF_u539F_u6709_u7248_u672C" class="headerlink" title="3.检查系统原有版本"></a>3.检查系统原有版本</h2><p>java version<br>如无任何版本，则直接进行第6步</p>
+<h2 id="4-__u67E5_u770Bjdk_u4FE1_u606F"><a href="#4-__u67E5_u770Bjdk_u4FE1_u606F" class="headerlink" title="4. 查看jdk信息"></a>4. 查看jdk信息</h2><p>[root@kxx ~]# rpm - qa | grep java<br>tzdata-java-2014g-1.el6.noarch<br>java-1.6.0-openjdk-1.6.0.0-11.1.13.4.el6.x86_64<br>java-1.7.0-openjdk-1.7.0.65-2.5.1.2.el6_5.x86_64</p>
+<h2 id="5-_u5378_u8F7D_u539F_u6709jdk"><a href="#5-_u5378_u8F7D_u539F_u6709jdk" class="headerlink" title="5.卸载原有jdk"></a>5.卸载原有jdk</h2><p>[root@kxx ~]# rpm -e –nodeps tzdata-java-2014g-1.el6.noarch<br>[root@kxx ~]# rpm -e –nodeps java-1.6.0-openjdk-1.6.0.0-11.1.13.4.el6.x86_64<br>[root@kxx ~]# rpm -e –nodeps java-1.7.0-openjdk-1.7.0.65-2.5.1.2.el6_5.x86_64</p>
+<h2 id="6-_u5B89_u88C5jdk"><a href="#6-_u5B89_u88C5jdk" class="headerlink" title="6.安装jdk"></a>6.安装jdk</h2><p>[root@kxx ~]# rpm -ivh jdk-8u73-linux-x64.rpm</p>
+<h2 id="7-_u9A8C_u8BC1_u662F_u5426_u5B89_u88C5_u6210_u529F"><a href="#7-_u9A8C_u8BC1_u662F_u5426_u5B89_u88C5_u6210_u529F" class="headerlink" title="7.验证是否安装成功"></a>7.验证是否安装成功</h2><p>[root@kxx ~]# java -version<br>java version “1.8.0_73”<br>Java(TM) SE Runtime Environment (build 1.8.0_73-b02)<br>Java HotSpot(TM) 64-Bit Server VM (build 25.73-b02, mixed mode)</p>
 
       
     </div>
@@ -295,13 +285,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2016/01/01/start/">开篇</a></p>
+        <p><span>本文标题:</span><a href="/2016/02/28/centos6.5_rpm_java/">CentOS6.5使用rpm安装最新版本Java</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 孔祥溪 的个人博客">孔祥溪</a></p>
-        <p><span>发布时间:</span>2016年01月01日 - 00时05分</p>
-        <p><span>最后更新:</span>2016年01月31日 - 00时13分</p>
+        <p><span>发布时间:</span>2016年02月28日 - 22时03分</p>
+        <p><span>最后更新:</span>2016年02月28日 - 22时19分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2016/01/01/start/" title="开篇">http://xiangxik.github.io/2016/01/01/start/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://xiangxik.github.io/2016/01/01/start/　　作者: 孔祥溪" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2016/02/28/centos6.5_rpm_java/" title="CentOS6.5使用rpm安装最新版本Java">http://xiangxik.github.io/2016/02/28/centos6.5_rpm_java/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://xiangxik.github.io/2016/02/28/centos6.5_rpm_java/　　作者: 孔祥溪" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -314,12 +304,12 @@
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2016/01/30/extjs6_by_example1/">
-                    《Ext JS 6 By Example》翻译 章节1. 开始使用
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2016/02/28/centos6.5_yum_mysql/">
+                    CentOS6.5使用yum安装mysql
                 </a>
             </div>
-        
         
     </nav>
 
@@ -328,7 +318,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-_u4E0B_u8F7D_u6700_u65B0_u7248_u672C_u7684java"><span class="toc-number">1.</span> <span class="toc-text">1.下载最新版本的java</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-_u4E0A_u4F20_u5230CentOS_u7684_u67D0_u4E2A_u76EE_u5F55_u4E0B"><span class="toc-number">2.</span> <span class="toc-text">2.上传到CentOS的某个目录下</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-_u68C0_u67E5_u7CFB_u7EDF_u539F_u6709_u7248_u672C"><span class="toc-number">3.</span> <span class="toc-text">3.检查系统原有版本</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-__u67E5_u770Bjdk_u4FE1_u606F"><span class="toc-number">4.</span> <span class="toc-text">4. 查看jdk信息</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-_u5378_u8F7D_u539F_u6709jdk"><span class="toc-number">5.</span> <span class="toc-text">5.卸载原有jdk</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-_u5B89_u88C5jdk"><span class="toc-number">6.</span> <span class="toc-text">6.安装jdk</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-_u9A8C_u8BC1_u662F_u5426_u5B89_u88C5_u6210_u529F"><span class="toc-number">7.</span> <span class="toc-text">7.验证是否安装成功</span></a></li></ol>
 </div>
 <style>
     .left-col .switch-btn {
@@ -392,7 +382,7 @@
     
       <div class="duoshuo" id="comments">
     <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="2016/01/01/start/" data-title="开篇" data-url="http://xiangxik.github.io/2016/01/01/start/"></div>
+    <div class="ds-thread" data-thread-key="2016/02/28/centos6.5_rpm_java/" data-title="CentOS6.5使用rpm安装最新版本Java" data-url="http://xiangxik.github.io/2016/02/28/centos6.5_rpm_java/"></div>
     <!-- 多说评论框 end -->
     <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
     <script type="text/javascript">
@@ -416,15 +406,15 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2016/01/30/extjs6_by_example1/" title="上一篇: 《Ext JS 6 By Example》翻译 章节1. 开始使用">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+            <a href="/2016/02/28/centos6.5_yum_mysql/" title="下一篇: CentOS6.5使用yum安装mysql">
+                <i class="fa fa-angle-right"></i>
+            </a>
         
     </div>
 

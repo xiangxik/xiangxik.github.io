@@ -3,24 +3,21 @@
 <head>
   <meta charset="utf-8">
   
-  <title>开篇 | 程序员自我修养</title>
+  <title>《Ext JS 6 By Example》翻译 章节1. 开始使用 | 程序员自我修养</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="第一篇博客。在2016年的第一天。
-
-今年的几个目标">
+  <meta name="description" content="当你留意到这个文章时，你应该接触过javascript，甚至熟练运用javascript。javascript是一个伟大的、强大的语言。但是随着web应用变得越来越大，我们发现很难去维护javascript的代码。因此，javascript显得十分困难和消耗时间。
+伴随着javascript框架的出现，包括客户端javascript框架和服务端javascript框架，extjs是客户端javas">
 <meta property="og:type" content="article">
-<meta property="og:title" content="开篇">
-<meta property="og:url" content="http://xiangxik.github.io/2016/01/01/start/index.html">
+<meta property="og:title" content="《Ext JS 6 By Example》翻译 章节1. 开始使用">
+<meta property="og:url" content="http://xiangxik.github.io/2016/01/30/extjs6_by_example1/index.html">
 <meta property="og:site_name" content="程序员自我修养">
-<meta property="og:description" content="第一篇博客。在2016年的第一天。
-
-今年的几个目标">
-<meta property="og:updated_time" content="2016-01-30T16:13:07.596Z">
+<meta property="og:description" content="当你留意到这个文章时，你应该接触过javascript，甚至熟练运用javascript。javascript是一个伟大的、强大的语言。但是随着web应用变得越来越大，我们发现很难去维护javascript的代码。因此，javascript显得十分困难和消耗时间。
+伴随着javascript框架的出现，包括客户端javascript框架和服务端javascript框架，extjs是客户端javas">
+<meta property="og:updated_time" content="2016-02-20T09:42:10.053Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="开篇">
-<meta name="twitter:description" content="第一篇博客。在2016年的第一天。
-
-今年的几个目标">
+<meta name="twitter:title" content="《Ext JS 6 By Example》翻译 章节1. 开始使用">
+<meta name="twitter:description" content="当你留意到这个文章时，你应该接触过javascript，甚至熟练运用javascript。javascript是一个伟大的、强大的语言。但是随着web应用变得越来越大，我们发现很难去维护javascript的代码。因此，javascript显得十分困难和消耗时间。
+伴随着javascript框架的出现，包括客户端javascript框架和服务端javascript框架，extjs是客户端javas">
   
     <link rel="alternative" href="/atom.xml" title="程序员自我修养" type="application/atom+xml">
   
@@ -243,11 +240,11 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-start" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-extjs6_by_example1" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/01/01/start/" class="article-date">
-      <time datetime="2015-12-31T16:05:50.000Z" itemprop="datePublished">2016-01-01</time>
+      <a href="/2016/01/30/extjs6_by_example1/" class="article-date">
+      <time datetime="2016-01-30T10:05:16.000Z" itemprop="datePublished">2016-01-30</time>
 </a>
     </div>
   
@@ -260,7 +257,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      开篇
+      《Ext JS 6 By Example》翻译 章节1. 开始使用
     </h1>
   
 
@@ -270,6 +267,10 @@
         
 
         
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/extjs6-by-example/">extjs6 by example</a></li></ul>
+    </div>
+
         <div class="clearfix"></div>
       </div>
       
@@ -277,16 +278,27 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>第一篇博客。在2016年的第一天。</p>
-<blockquote>
-<p>今年的几个目标<br><a id="more"></a></p>
-<ol>
-<li>完成2个以上中型项目。</li>
-<li>完善web框架。</li>
-<li>完善app框架。</li>
-<li>获得融资，进行产品研发。</li>
-</ol>
-</blockquote>
+        <p>当你留意到这个文章时，你应该接触过javascript，甚至熟练运用javascript。javascript是一个伟大的、强大的语言。但是随着web应用变得越来越大，我们发现很难去维护javascript的代码。因此，javascript显得十分困难和消耗时间。</p>
+<p>伴随着javascript框架的出现，包括客户端javascript框架和服务端javascript框架，extjs是客户端javascript框架之一。<br><a id="more"></a><br>本章节主要是extjs的基本介绍，和使用一些必要的工具，搭建extjs的开发环境。我们将讨论以下话题：</p>
+<ul>
+<li>extjs的优点</li>
+<li>extjs的介绍</li>
+<li>安装extjs和Sencha Cmd</li>
+<li>使用Sencha Cmd搭建extjs应用程序</li>
+<li>应用程序的架构</li>
+<li>探索Sencha Cmd的命令</li>
+<li>调试Extjs应用程序</li>
+<li>开发工具</li>
+</ul>
+<h2 id="u4E3A_u4EC0_u4E48_u4F7F_u7528Extjs"><a href="#u4E3A_u4EC0_u4E48_u4F7F_u7528Extjs" class="headerlink" title="为什么使用Extjs"></a>为什么使用Extjs</h2><p>在web应用程序下，使用extjs有以下优点：</p>
+<h3 id="u652F_u6301_u8DE8_u6D4F_u89C8_u5668"><a href="#u652F_u6301_u8DE8_u6D4F_u89C8_u5668" class="headerlink" title="支持跨浏览器"></a>支持跨浏览器</h3><p>你可能会花上几个小时甚至几天时间去解决跨浏览器的bug，而没有把精力花费到解决你的业务逻辑上。然而，一个好的javascript框架，像extjs，它帮我们解决了这个任务，让我们把精力关注到我们的业务逻辑上。</p>
+<h3 id="u5BCCUI_u7EC4_u4EF6"><a href="#u5BCCUI_u7EC4_u4EF6" class="headerlink" title="富UI组件"></a>富UI组件</h3><p>extjs包含大量的富UI组件，譬如data grid、tab、panels、tree controls、date picker、charts等，它们会节省你大量的开发时间。</p>
+<h3 id="u53CC_u5411_u6570_u636E_u7ED1_u5B9A"><a href="#u53CC_u5411_u6570_u636E_u7ED1_u5B9A" class="headerlink" title="双向数据绑定"></a>双向数据绑定</h3><p>双向数据绑定意思是：当视图的数据改变，你的模型会自动改变。同样的，当你的应用更新了模型，视图的关联数据也会自动的改变。<br>举个列子，编辑页面。当你加载页面的时候，你需要把模型的数据展示成html，当用户在视图上修改数据时，你需要更新你的模型，但如果你使用了extjs，extjs自动地帮你完成，你将不需要做任何操作。</p>
+<h3 id="javascript_u6784_u5EFA_u6A21_u5F0F"><a href="#javascript_u6784_u5EFA_u6A21_u5F0F" class="headerlink" title="javascript构建模式"></a>javascript构建模式</h3><p>随着越来越多的代码移到客户端，维护客户端javascript代码变得十分困难。由此产生的MVC(Model View Controller)/MVVM(Model View, View Model)架构使得客户端代码易于维护，在生产环境使用增长很快。MVC和MVVM将在后面解释。</p>
+<h3 id="u7B80_u5316_u590D_u6742_u7684_u64CD_u4F5C"><a href="#u7B80_u5316_u590D_u6742_u7684_u64CD_u4F5C" class="headerlink" title="简化复杂的操作"></a>简化复杂的操作</h3><p>试想一下编辑一段ajax调用的javascript代码，并确保其在所有的浏览器中运行正确。让我们看一下在其他javascript框架中ajax调用的源码。试想一下在纯javascript中创建一个复杂的控件譬如grid，并包含如分页、排序、过滤、分组、快捷键、可编辑等等功能。</p>
+<h3 id="u7B80_u5355_u7684dom_u8BBF_u95EE"><a href="#u7B80_u5355_u7684dom_u8BBF_u95EE" class="headerlink" title="简单的dom访问"></a>简单的dom访问</h3><p>在纯javasript中，你可以访问dom，但它是那么的复杂。</p>
+<h3 id="u5BA2_u6237_u7AEF_u8DEF_u7531"><a href="#u5BA2_u6237_u7AEF_u8DEF_u7531" class="headerlink" title="客户端路由"></a>客户端路由</h3><p>在许多web应用程序中，路由指根据url访问web页面并执行逻辑。路由可以在服务端也可以在客户端。通常，客户端路由是用于单页面应用。</p>
+<h2 id="extjs_u4ECB_u7ECD"><a href="#extjs_u4ECB_u7ECD" class="headerlink" title="extjs介绍"></a>extjs介绍</h2><p>extjs几乎是一个一站式的开发富UI应用的框架。它提供MVC、MMVM、双向绑定、跨浏览器兼容、路由、可扩展的富UI组件集合、图表等。extjs还拥有完整的api文档。extjs起源于一个第三方库YUI，它现在是Sencha公司的一个产品。<br>使用extjs，你将大部分都是写javascript代码，基本上你不用写html代码。extjs装载着大量的富UI组件可以节省你的开发时间。</p>
 
       
     </div>
@@ -295,13 +307,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2016/01/01/start/">开篇</a></p>
+        <p><span>本文标题:</span><a href="/2016/01/30/extjs6_by_example1/">《Ext JS 6 By Example》翻译 章节1. 开始使用</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 孔祥溪 的个人博客">孔祥溪</a></p>
-        <p><span>发布时间:</span>2016年01月01日 - 00时05分</p>
-        <p><span>最后更新:</span>2016年01月31日 - 00时13分</p>
+        <p><span>发布时间:</span>2016年01月30日 - 18时05分</p>
+        <p><span>最后更新:</span>2016年02月20日 - 17时42分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2016/01/01/start/" title="开篇">http://xiangxik.github.io/2016/01/01/start/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://xiangxik.github.io/2016/01/01/start/　　作者: 孔祥溪" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2016/01/30/extjs6_by_example1/" title="《Ext JS 6 By Example》翻译 章节1. 开始使用">http://xiangxik.github.io/2016/01/30/extjs6_by_example1/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://xiangxik.github.io/2016/01/30/extjs6_by_example1/　　作者: 孔祥溪" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -315,11 +327,17 @@
     <nav id="article-nav">
         
             <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2016/01/30/extjs6_by_example1/">
-                    《Ext JS 6 By Example》翻译 章节1. 开始使用
+                <a href="/2016/02/28/centos6.5_yum_mysql/">
+                    CentOS6.5使用yum安装mysql
                 </a>
             </div>
         
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2016/01/01/start/">
+                    开篇
+                </a>
+            </div>
         
     </nav>
 
@@ -328,7 +346,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#u4E3A_u4EC0_u4E48_u4F7F_u7528Extjs"><span class="toc-number">1.</span> <span class="toc-text">为什么使用Extjs</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#u652F_u6301_u8DE8_u6D4F_u89C8_u5668"><span class="toc-number">1.1.</span> <span class="toc-text">支持跨浏览器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#u5BCCUI_u7EC4_u4EF6"><span class="toc-number">1.2.</span> <span class="toc-text">富UI组件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#u53CC_u5411_u6570_u636E_u7ED1_u5B9A"><span class="toc-number">1.3.</span> <span class="toc-text">双向数据绑定</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#javascript_u6784_u5EFA_u6A21_u5F0F"><span class="toc-number">1.4.</span> <span class="toc-text">javascript构建模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#u7B80_u5316_u590D_u6742_u7684_u64CD_u4F5C"><span class="toc-number">1.5.</span> <span class="toc-text">简化复杂的操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#u7B80_u5355_u7684dom_u8BBF_u95EE"><span class="toc-number">1.6.</span> <span class="toc-text">简单的dom访问</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#u5BA2_u6237_u7AEF_u8DEF_u7531"><span class="toc-number">1.7.</span> <span class="toc-text">客户端路由</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#extjs_u4ECB_u7ECD"><span class="toc-number">2.</span> <span class="toc-text">extjs介绍</span></a></li></ol>
 </div>
 <style>
     .left-col .switch-btn {
@@ -392,7 +410,7 @@
     
       <div class="duoshuo" id="comments">
     <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="2016/01/01/start/" data-title="开篇" data-url="http://xiangxik.github.io/2016/01/01/start/"></div>
+    <div class="ds-thread" data-thread-key="2016/01/30/extjs6_by_example1/" data-title="《Ext JS 6 By Example》翻译 章节1. 开始使用" data-url="http://xiangxik.github.io/2016/01/30/extjs6_by_example1/"></div>
     <!-- 多说评论框 end -->
     <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
     <script type="text/javascript">
@@ -416,7 +434,7 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2016/01/30/extjs6_by_example1/" title="上一篇: 《Ext JS 6 By Example》翻译 章节1. 开始使用">
+            <a href="/2016/02/28/centos6.5_yum_mysql/" title="上一篇: CentOS6.5使用yum安装mysql">
                 <i class="fa fa-angle-left"></i>
             </a>
         
@@ -424,7 +442,9 @@
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+            <a href="/2016/01/01/start/" title="下一篇: 开篇">
+                <i class="fa fa-angle-right"></i>
+            </a>
         
     </div>
 
