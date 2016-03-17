@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://xiangxik.github.io/about/index.html</loc>
+    
+    <lastmod>2016-03-17T15:43:41.198Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://xiangxik.github.io/tags/index.html</loc>
+    
+    <lastmod>2016-03-17T15:34:03.009Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://xiangxik.github.io//404.html</loc>
+    
+    <lastmod>2016-03-17T15:32:39.135Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://xiangxik.github.io/2016/02/29/javaplatform1/</loc>
     
     <lastmod>2016-02-29T09:28:22.731Z</lastmod>
