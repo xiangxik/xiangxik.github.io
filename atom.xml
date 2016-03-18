@@ -5,7 +5,7 @@
   <link href="//atom.xml" rel="self"/>
   
   <link href="http://xiangxik.github.io/"/>
-  <updated>2016-03-18T15:22:00.376Z</updated>
+  <updated>2016-03-18T16:12:01.611Z</updated>
   <id>http://xiangxik.github.io/</id>
   
   <author>
@@ -20,10 +20,10 @@
     <link href="http://xiangxik.github.io/2016/02/29/javaplatform1/"/>
     <id>http://xiangxik.github.io/2016/02/29/javaplatform1/</id>
     <published>2016-02-29T09:25:49.000Z</published>
-    <updated>2016-03-18T15:22:00.376Z</updated>
+    <updated>2016-03-18T16:12:01.611Z</updated>
     
     <content type="html">&lt;p&gt;&lt;/p&gt;&lt;h2 id=&quot;intro&quot;&gt;前言&lt;/h2&gt;基于servlet3.1的模块化规范，采用spring, spring mvc, jpa, spring data, shiro, fastjson, beetl等开源技术，搭建了一套可模块化扩展的java框架，并使用extjs6实现了后台管理的公共功能。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;p&gt;&lt;/p&gt;
-&lt;div class=&quot;github-widget&quot; data-repo=&quot;https://github.com/xiangxik/java-platform&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;github-widget&quot; data-repo=&quot;xiangxik/java-platform&quot;&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;u7279_u70B9&quot;&gt;&lt;a href=&quot;#u7279_u70B9&quot; class=&quot;headerlink&quot; title=&quot;特点&quot;&gt;&lt;/a&gt;特点&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;基于目前最新的一些java技术&lt;/li&gt;
