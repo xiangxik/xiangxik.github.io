@@ -5,7 +5,7 @@
   <link href="//atom.xml" rel="self"/>
   
   <link href="http://xiangxik.github.io/"/>
-  <updated>2016-02-29T09:28:22.731Z</updated>
+  <updated>2016-03-18T15:22:00.376Z</updated>
   <id>http://xiangxik.github.io/</id>
   
   <author>
@@ -20,10 +20,12 @@
     <link href="http://xiangxik.github.io/2016/02/29/javaplatform1/"/>
     <id>http://xiangxik.github.io/2016/02/29/javaplatform1/</id>
     <published>2016-02-29T09:25:49.000Z</published>
-    <updated>2016-02-29T09:28:22.731Z</updated>
+    <updated>2016-03-18T15:22:00.376Z</updated>
     
-    <content type="html">&lt;h1 id=&quot;u9759_u6001_u6A21_u5757_u5316java_u5F00_u53D1_u5E73_u53F0&quot;&gt;&lt;a href=&quot;#u9759_u6001_u6A21_u5757_u5316java_u5F00_u53D1_u5E73_u53F0&quot; class=&quot;headerlink&quot; title=&quot;静态模块化java开发平台&quot;&gt;&lt;/a&gt;静态模块化java开发平台&lt;/h1&gt;&lt;p&gt;基于servlet3.1的模块化规范，采用spring, spring mvc, jpa, spring data, shiro, fastjson, beetl等开源技术，搭建了一套可模块化扩展的java框架，并使用extjs6实现了后台管理的公共功能。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&quot;u7279_u70B9&quot;&gt;&lt;a href=&quot;#u7279_u70B9&quot; class=&quot;headerlink&quot; title=&quot;特点&quot;&gt;&lt;/a&gt;特点&lt;/h3&gt;&lt;ul&gt;
+    <content type="html">&lt;p&gt;&lt;/p&gt;&lt;h2 id=&quot;intro&quot;&gt;前言&lt;/h2&gt;基于servlet3.1的模块化规范，采用spring, spring mvc, jpa, spring data, shiro, fastjson, beetl等开源技术，搭建了一套可模块化扩展的java框架，并使用extjs6实现了后台管理的公共功能。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;p&gt;&lt;/p&gt;
+&lt;div class=&quot;github-widget&quot; data-repo=&quot;https://github.com/xiangxik/java-platform&quot;&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;u7279_u70B9&quot;&gt;&lt;a href=&quot;#u7279_u70B9&quot; class=&quot;headerlink&quot; title=&quot;特点&quot;&gt;&lt;/a&gt;特点&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;基于目前最新的一些java技术&lt;/li&gt;
 &lt;li&gt;采用Java8的语法。&lt;/li&gt;
 &lt;li&gt;主要模块化的思想是来自于servlet3.1规范的web集成机制&lt;/li&gt;
@@ -31,7 +33,7 @@
 &lt;li&gt;采用spring javaconfig.达到0spring配置文件&lt;/li&gt;
 &lt;li&gt;包含通用的后台管理功能&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&quot;u5DE5_u7A0B_u7528_u9014_u8BF4_u660E&quot;&gt;&lt;a href=&quot;#u5DE5_u7A0B_u7528_u9014_u8BF4_u660E&quot; class=&quot;headerlink&quot; title=&quot;工程用途说明&quot;&gt;&lt;/a&gt;工程用途说明&lt;/h3&gt;&lt;ul&gt;
+&lt;h2 id=&quot;u5DE5_u7A0B_u7528_u9014_u8BF4_u660E&quot;&gt;&lt;a href=&quot;#u5DE5_u7A0B_u7528_u9014_u8BF4_u660E&quot; class=&quot;headerlink&quot; title=&quot;工程用途说明&quot;&gt;&lt;/a&gt;工程用途说明&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;application-centralize: 平台包，项目引入该包即可包含了主要功能，依赖于全部module包。&lt;/li&gt;
 &lt;li&gt;module-base: 构成平台的基础包。&lt;/li&gt;
 &lt;li&gt;module-domain: 构成平台的领域数据操作包，依赖于module-base。&lt;/li&gt;
@@ -41,7 +43,7 @@
 &lt;li&gt;extension-cms: 扩展平台包。包含cms的功能。引入该包即拥有cms功能。&lt;/li&gt;
 &lt;li&gt;extension-mall: 扩展平台包。包含商城及支付等功能。引入该包即拥有商城功能。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&quot;u4EE3_u7801_u5730_u5740&quot;&gt;&lt;a href=&quot;#u4EE3_u7801_u5730_u5740&quot; class=&quot;headerlink&quot; title=&quot;代码地址&quot;&gt;&lt;/a&gt;代码地址&lt;/h3&gt;&lt;ul&gt;
+&lt;h2 id=&quot;u4EE3_u7801_u5730_u5740&quot;&gt;&lt;a href=&quot;#u4EE3_u7801_u5730_u5740&quot; class=&quot;headerlink&quot; title=&quot;代码地址&quot;&gt;&lt;/a&gt;代码地址&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/xiangxik/java-platform&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/xiangxik/java-platform&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://git.oschina.net/xiangxik/java-platform&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://git.oschina.net/xiangxik/java-platform&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -49,9 +51,11 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;u9759_u6001_u6A21_u5757_u5316java_u5F00_u53D1_u5E73_u53F0&quot;&gt;&lt;a href=&quot;#u9759_u6001_u6A21_u5757_u5316java_u5F00_u53D1_u5E73_u53F0&quot; class=&quot;headerlink&quot; title=&quot;静态模块化java开发平台&quot;&gt;&lt;/a&gt;静态模块化java开发平台&lt;/h1&gt;&lt;p&gt;基于servlet3.1的模块化规范，采用spring, spring mvc, jpa, spring data, shiro, fastjson, beetl等开源技术，搭建了一套可模块化扩展的java框架，并使用extjs6实现了后台管理的公共功能。&lt;br&gt;
+      &lt;p&gt;&lt;h2 id=&quot;intro&quot;&gt;前言&lt;/h2&gt;基于servlet3.1的模块化规范，采用spring, spring mvc, jpa, spring data, shiro, fastjson, beetl等开源技术，搭建了一套可模块化扩展的java框架，并使用extjs6实现了后台管理的公共功能。&lt;br&gt;
     
     </summary>
+    
+      <category term="架构设计" scheme="http://xiangxik.github.io/categories/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/"/>
     
     
       <category term="java" scheme="http://xiangxik.github.io/tags/java/"/>
@@ -93,11 +97,11 @@
   </entry>
   
   <entry>
-    <title>《Ext JS 6 By Example》翻译 章节1. 开始使用</title>
+    <title>《Ext JS 6 By Example》 章节1. 开始使用</title>
     <link href="http://xiangxik.github.io/2016/01/30/extjs6_by_example1/"/>
     <id>http://xiangxik.github.io/2016/01/30/extjs6_by_example1/</id>
     <published>2016-01-30T10:05:16.000Z</published>
-    <updated>2016-02-29T09:28:10.372Z</updated>
+    <updated>2016-03-18T15:13:50.871Z</updated>
     
     <content type="html">&lt;p&gt;当你留意到这个文章时，你应该接触过javascript，甚至熟练运用javascript。javascript是一个伟大的、强大的语言。但是随着web应用变得越来越大，我们发现很难去维护javascript的代码。因此，javascript显得十分困难和消耗时间。&lt;/p&gt;
 &lt;p&gt;伴随着javascript框架的出现，包括客户端javascript框架和服务端javascript框架，extjs是客户端javascript框架之一。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;br&gt;本章节主要是extjs的基本介绍，和使用一些必要的工具，搭建extjs的开发环境。我们将讨论以下话题：&lt;/p&gt;
@@ -128,6 +132,8 @@
 &lt;p&gt;伴随着javascript框架的出现，包括客户端javascript框架和服务端javascript框架，extjs是客户端javascript框架之一。&lt;br&gt;
     
     </summary>
+    
+      <category term="原创翻译" scheme="http://xiangxik.github.io/categories/%E5%8E%9F%E5%88%9B%E7%BF%BB%E8%AF%91/"/>
     
     
       <category term="extjs" scheme="http://xiangxik.github.io/tags/extjs/"/>
