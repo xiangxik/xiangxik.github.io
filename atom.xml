@@ -5,7 +5,7 @@
   <link href="//atom.xml" rel="self"/>
   
   <link href="http://xiangxik.github.io/"/>
-  <updated>2016-03-18T16:12:01.611Z</updated>
+  <updated>2016-03-19T14:24:06.242Z</updated>
   <id>http://xiangxik.github.io/</id>
   
   <author>
@@ -16,21 +16,206 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>静态模块化java开发平台 1.概述</title>
+    <title>java平台 4.混合式配置</title>
+    <link href="http://xiangxik.github.io/2016/03/19/javaplatform4/"/>
+    <id>http://xiangxik.github.io/2016/03/19/javaplatform4/</id>
+    <published>2016-03-19T14:23:13.000Z</published>
+    <updated>2016-03-19T14:24:06.242Z</updated>
+    
+    <content type="html">&lt;p&gt;&lt;/p&gt;&lt;h2 id=&quot;intro&quot;&gt;开始&lt;/h2&gt;配置是每一个框架最基本的部分，java-platform也不例外。本平台分静态配置和动态配置，静态配置指的是需要重启才会生效的配置，动态配置是能在界面上修改且即时生效的配置。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;p&gt;&lt;/p&gt;
+&lt;h2 id=&quot;apache_configuration&quot;&gt;&lt;a href=&quot;#apache_configuration&quot; class=&quot;headerlink&quot; title=&quot;apache configuration&quot;&gt;&lt;/a&gt;apache configuration&lt;/h2&gt;&lt;p&gt;平台主要使用的配置框架是apache configuration，由它提供了统一的Configuration接口。&lt;/p&gt;
+&lt;h2 id=&quot;u9759_u6001_u914D_u7F6E&quot;&gt;&lt;a href=&quot;#u9759_u6001_u914D_u7F6E&quot; class=&quot;headerlink&quot; title=&quot;静态配置&quot;&gt;&lt;/a&gt;静态配置&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;利用apache configuration工具，得出静态配置类:&lt;br&gt;com.whenling.module.base.config.StaticConfigurationSupplier&lt;br&gt;其append和prepend方法可以添加配置文件。&lt;br&gt;支持的配置文件类型有：xml(层次关系较好)、plist(可以带类型)、properties(常用简单)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;加载周期&lt;br&gt;静态配置应该是在系统启动最初的时候加载，故在org.springframework.web.WebApplicationInitializer的onStartup方法中加载是最好不过的了。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;加载顺序&lt;br&gt;当两个配置相同的时候，平台会使用最先找到的那一项。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;与spring配置混合&lt;br&gt;在ConfigConfiguration中，ConfigurationPropertySourcesPlaceholderConfigurer已做了混合的支持，即可以spring的表达式使用这些配置。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;u52A8_u6001_u914D_u7F6E&quot;&gt;&lt;a href=&quot;#u52A8_u6001_u914D_u7F6E&quot; class=&quot;headerlink&quot; title=&quot;动态配置&quot;&gt;&lt;/a&gt;动态配置&lt;/h2&gt;</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;h2 id=&quot;intro&quot;&gt;开始&lt;/h2&gt;配置是每一个框架最基本的部分，java-platform也不例外。本平台分静态配置和动态配置，静态配置指的是需要重启才会生效的配置，动态配置是能在界面上修改且即时生效的配置。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="架构设计" scheme="http://xiangxik.github.io/categories/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/"/>
+    
+    
+      <category term="java" scheme="http://xiangxik.github.io/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>java平台 3.模块化的实现原理</title>
+    <link href="http://xiangxik.github.io/2016/03/19/javaplatform3/"/>
+    <id>http://xiangxik.github.io/2016/03/19/javaplatform3/</id>
+    <published>2016-03-19T14:03:21.000Z</published>
+    <updated>2016-03-19T14:59:23.100Z</updated>
+    
+    <content type="html">&lt;p&gt;&lt;/p&gt;&lt;h2 id=&quot;intro&quot;&gt;开始&lt;/h2&gt;各种各样的项目，一些基础总是相同的，如何把基础搭建和巩固起来，使用模块化设计是不错的选择。目前，模块化的产品最规范的是osgi了，不过osgi太过于复杂，而且到现在，各厂商的实现也不能完全的兼容规范。osgi还有个特点是热部署，其实大多数项目，尤其是企业项目，暂停一下服务也不会造成很大的损失。能做到热部署固然是好的，但其增加了项目开发的复杂度，在需求不大的情况下，反而得不偿失。因此，静态模块化的java-platform由此诞生。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;p&gt;&lt;/p&gt;
+&lt;h2 id=&quot;java_spi&quot;&gt;&lt;a href=&quot;#java_spi&quot; class=&quot;headerlink&quot; title=&quot;java spi&quot;&gt;&lt;/a&gt;java spi&lt;/h2&gt;&lt;p&gt;首先，我们需要了解一下java spi。java spi是java6开始，提供的一个jar包之间读取实现类的标准。&lt;br&gt;主要涉及的类是java.util.ServiceLoader。&lt;br&gt;只要我们在类路径下的META-INF/services/，创建与接口全名称一样的文件，文件的内容，每一行代表它的一个实现类。&lt;br&gt;当使用ServiceLoader.load(接口)的时候，java将自动找到所有jar包下面的META-INF/services/接口 文件，加载其描述的实现类。&lt;br&gt;这样的好处很明显，当一个jar包含有接口的实现类，它的加入，便可以带来的新功能，它的移除，功能也随之移除。功能的添加及移除，不影响任何代码的编写。&lt;/p&gt;
+&lt;h2 id=&quot;servlet3-1&quot;&gt;&lt;a href=&quot;#servlet3-1&quot; class=&quot;headerlink&quot; title=&quot;servlet3.1&quot;&gt;&lt;/a&gt;servlet3.1&lt;/h2&gt;&lt;p&gt;servlet3.0开始，加入了一个不需要web.xml配置的特性，该特性的实现就是通过spi。&lt;br&gt;在web项目中，只要在META-INF/services/创建文件javax.servlet.ServletContainerInitializer，在项目中实现该接口，并把其添加到文件中，则容器启动时，会加载这些实现类。&lt;br&gt;我们可以在实现类中增加filter，增加servlet，增加listener，基本上web.xml的功能都能在此体现，而且代码编写比xml强多了。&lt;/p&gt;
+&lt;h2 id=&quot;spring_web_u7684_u652F_u6301&quot;&gt;&lt;a href=&quot;#spring_web_u7684_u652F_u6301&quot; class=&quot;headerlink&quot; title=&quot;spring web的支持&quot;&gt;&lt;/a&gt;spring web的支持&lt;/h2&gt;&lt;p&gt;spring web根据servlet3.0提供的特性，增加了一个对ServletContainerInitializer的实现。我们从源码中也可以看到：&lt;br&gt;&lt;img src=&quot;/img/javaplatform/3-1.jpg&quot; alt=&quot;Alt spring&quot;&gt;&lt;br&gt;实现类为org.springframework.web.SpringServletContainerInitializer&lt;br&gt;查看源码得知，会交给org.springframework.web.WebApplicationInitializer来处理&lt;/p&gt;
+&lt;h2 id=&quot;u5E73_u53F0_u6A21_u5757_u5316&quot;&gt;&lt;a href=&quot;#u5E73_u53F0_u6A21_u5757_u5316&quot; class=&quot;headerlink&quot; title=&quot;平台模块化&quot;&gt;&lt;/a&gt;平台模块化&lt;/h2&gt;&lt;p&gt;到此，原理已经很清晰，平台就是通过实现WebApplicationInitializer，实现模块化。&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;h2 id=&quot;intro&quot;&gt;开始&lt;/h2&gt;各种各样的项目，一些基础总是相同的，如何把基础搭建和巩固起来，使用模块化设计是不错的选择。目前，模块化的产品最规范的是osgi了，不过osgi太过于复杂，而且到现在，各厂商的实现也不能完全的兼容规范。osgi还有个特点是热部署，其实大多数项目，尤其是企业项目，暂停一下服务也不会造成很大的损失。能做到热部署固然是好的，但其增加了项目开发的复杂度，在需求不大的情况下，反而得不偿失。因此，静态模块化的java-platform由此诞生。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="架构设计" scheme="http://xiangxik.github.io/categories/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/"/>
+    
+    
+      <category term="java" scheme="http://xiangxik.github.io/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>java平台 2.开始使用</title>
+    <link href="http://xiangxik.github.io/2016/03/19/javaplatform2/"/>
+    <id>http://xiangxik.github.io/2016/03/19/javaplatform2/</id>
+    <published>2016-03-19T12:54:44.000Z</published>
+    <updated>2016-03-19T14:23:53.240Z</updated>
+    
+    <content type="html">&lt;p&gt;&lt;/p&gt;&lt;h2 id=&quot;intro&quot;&gt;开始&lt;/h2&gt;要使用一个开发平台，首要事情就是把系统部署起来，并能进行最基本的增删改查。该平台的搭建和进行增删改查是十分的简单的事情。下面我们来一步一步地把系统建立起来。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;p&gt;&lt;/p&gt;
+&lt;h2 id=&quot;u73AF_u5883_u642D_u5EFA&quot;&gt;&lt;a href=&quot;#u73AF_u5883_u642D_u5EFA&quot; class=&quot;headerlink&quot; title=&quot;环境搭建&quot;&gt;&lt;/a&gt;环境搭建&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;把代码下载下来并导入到eclipse&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;/img/javaplatform/2-1.jpg&quot; alt=&quot;Alt eclipse&quot;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;新建maven工程&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;/img/javaplatform/2-2.jpg&quot; alt=&quot;Alt maven&quot;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;修改pom.xml文件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;
+&amp;lt;project xmlns=&amp;quot;http://maven.apache.org/POM/4.0.0&amp;quot; xmlns:xsi=&amp;quot;http://www.w3.org/2001/XMLSchema-instance&amp;quot;
+    xsi:schemaLocation=&amp;quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&amp;quot;&amp;gt;
+    &amp;lt;modelVersion&amp;gt;4.0.0&amp;lt;/modelVersion&amp;gt;
+    &amp;lt;parent&amp;gt;
+        &amp;lt;groupId&amp;gt;com.whenling&amp;lt;/groupId&amp;gt;
+        &amp;lt;artifactId&amp;gt;java-platform&amp;lt;/artifactId&amp;gt;
+        &amp;lt;version&amp;gt;1.0.0.RELEASE&amp;lt;/version&amp;gt;
+    &amp;lt;/parent&amp;gt;
+    &amp;lt;artifactId&amp;gt;example-1&amp;lt;/artifactId&amp;gt;
+    &amp;lt;version&amp;gt;1.0.0&amp;lt;/version&amp;gt;
+    &amp;lt;packaging&amp;gt;war&amp;lt;/packaging&amp;gt;
+
+    &amp;lt;dependencies&amp;gt;
+        &amp;lt;dependency&amp;gt;
+            &amp;lt;groupId&amp;gt;com.whenling&amp;lt;/groupId&amp;gt;
+            &amp;lt;artifactId&amp;gt;application-centralize&amp;lt;/artifactId&amp;gt;
+            &amp;lt;version&amp;gt;1.0.0.RELEASE&amp;lt;/version&amp;gt;
+        &amp;lt;/dependency&amp;gt;
+    &amp;lt;/dependencies&amp;gt;
+
+    &amp;lt;build&amp;gt;
+        &amp;lt;plugins&amp;gt;
+            &amp;lt;plugin&amp;gt;
+                &amp;lt;groupId&amp;gt;org.apache.maven.plugins&amp;lt;/groupId&amp;gt;
+                &amp;lt;artifactId&amp;gt;maven-war-plugin&amp;lt;/artifactId&amp;gt;
+                &amp;lt;configuration&amp;gt;
+                    &amp;lt;!-- web.xml is not mandatory since JavaEE 5 --&amp;gt;
+                    &amp;lt;failOnMissingWebXml&amp;gt;false&amp;lt;/failOnMissingWebXml&amp;gt;
+                &amp;lt;/configuration&amp;gt;
+            &amp;lt;/plugin&amp;gt;
+        &amp;lt;/plugins&amp;gt;
+    &amp;lt;/build&amp;gt;
+&amp;lt;/project&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;新建初始化器。为了加载自定义的配置文件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;
+package com.whenling.example1;
+
+import javax.servlet.ServletContext;
+import javax.servlet.ServletException;
+
+import org.springframework.core.Ordered;
+import org.springframework.core.annotation.Order;
+import org.springframework.web.WebApplicationInitializer;
+
+import com.whenling.module.base.config.StaticConfigurationSupplier;
+
+@Order(Ordered.LOWEST_PRECEDENCE)
+public class ExampleInitializer implements WebApplicationInitializer {
+
+    @Override
+    public void onStartup(ServletContext servletContext) throws ServletException {
+        StaticConfigurationSupplier.prepend(&quot;config.properties&quot;);
+    }
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;创建配置文件config.properties&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;需要相应地创建此数据库。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;
+jdbc.url=jdbc:mysql://localhost:3306/platform?useUnicode=true&amp;characterEncoding=utf-8
+jdbc.username=root
+jdbc.password=abcdefg
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;在webapp下创建WEB-INF文件夹&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;使用支持servlet3.1的容器启动即可&lt;br&gt;我使用的是jetty-9.3.3.v20150827&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;u521D_u6B65_u4F7F_u7528&quot;&gt;&lt;a href=&quot;#u521D_u6B65_u4F7F_u7528&quot; class=&quot;headerlink&quot; title=&quot;初步使用&quot;&gt;&lt;/a&gt;初步使用&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;输入&lt;a href=&quot;http://localhost:8080/admin&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://localhost:8080/admin&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;/img/javaplatform/2-3.jpg&quot; alt=&quot;Alt eclipse&quot;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;使用初始登陆密码&lt;br&gt;用户名：admin&lt;br&gt;密码：asd123&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;u603B_u7ED3&quot;&gt;&lt;a href=&quot;#u603B_u7ED3&quot; class=&quot;headerlink&quot; title=&quot;总结&quot;&gt;&lt;/a&gt;总结&lt;/h2&gt;&lt;p&gt;整个项目仅仅需要一个初始化器来读取配置文件，即可运行，且拥有了一个完整的后台管理功能。&lt;br&gt;如要增加功能，只需在pom.xml添加依赖即可。&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;h2 id=&quot;intro&quot;&gt;开始&lt;/h2&gt;要使用一个开发平台，首要事情就是把系统部署起来，并能进行最基本的增删改查。该平台的搭建和进行增删改查是十分的简单的事情。下面我们来一步一步地把系统建立起来。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="架构设计" scheme="http://xiangxik.github.io/categories/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/"/>
+    
+    
+      <category term="java" scheme="http://xiangxik.github.io/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>java平台 1.概述</title>
     <link href="http://xiangxik.github.io/2016/02/29/javaplatform1/"/>
     <id>http://xiangxik.github.io/2016/02/29/javaplatform1/</id>
     <published>2016-02-29T09:25:49.000Z</published>
-    <updated>2016-03-18T16:12:01.611Z</updated>
+    <updated>2016-03-19T14:04:26.257Z</updated>
     
-    <content type="html">&lt;p&gt;&lt;/p&gt;&lt;h2 id=&quot;intro&quot;&gt;前言&lt;/h2&gt;基于servlet3.1的模块化规范，采用spring, spring mvc, jpa, spring data, shiro, fastjson, beetl等开源技术，搭建了一套可模块化扩展的java框架，并使用extjs6实现了后台管理的公共功能。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;p&gt;&lt;/p&gt;
+    <content type="html">&lt;p&gt;&lt;/p&gt;&lt;h2 id=&quot;intro&quot;&gt;前言&lt;/h2&gt;基于servlet3.1的模块化规范，采用spring, spring mvc, jpa, spring data, querydsl, shiro, fastjson, beetl等开源技术，搭建了一套可模块化扩展的java框架，并可选择地使用extjs6、easyui、bootstrap实现了后台管理的公共功能。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;p&gt;&lt;/p&gt;
 &lt;div class=&quot;github-widget&quot; data-repo=&quot;xiangxik/java-platform&quot;&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;u7279_u70B9&quot;&gt;&lt;a href=&quot;#u7279_u70B9&quot; class=&quot;headerlink&quot; title=&quot;特点&quot;&gt;&lt;/a&gt;特点&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;基于目前最新的一些java技术&lt;/li&gt;
-&lt;li&gt;采用Java8的语法。&lt;/li&gt;
+&lt;li&gt;采用Java8的语法&lt;/li&gt;
+&lt;li&gt;自定义模块化，自定义配置&lt;/li&gt;
 &lt;li&gt;主要模块化的思想是来自于servlet3.1规范的web集成机制&lt;/li&gt;
 &lt;li&gt;可扩展模块，通过引入jar包来决定是否采用该功能&lt;/li&gt;
 &lt;li&gt;采用spring javaconfig.达到0spring配置文件&lt;/li&gt;
+&lt;li&gt;采用querydsl通用查询&lt;/li&gt;
 &lt;li&gt;包含通用的后台管理功能&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&quot;u5DE5_u7A0B_u7528_u9014_u8BF4_u660E&quot;&gt;&lt;a href=&quot;#u5DE5_u7A0B_u7528_u9014_u8BF4_u660E&quot; class=&quot;headerlink&quot; title=&quot;工程用途说明&quot;&gt;&lt;/a&gt;工程用途说明&lt;/h2&gt;&lt;ul&gt;
@@ -38,20 +223,19 @@
 &lt;li&gt;module-base: 构成平台的基础包。&lt;/li&gt;
 &lt;li&gt;module-domain: 构成平台的领域数据操作包，依赖于module-base。&lt;/li&gt;
 &lt;li&gt;module-web: 构成平台的web功能包，依赖于module-domain。&lt;/li&gt;
+&lt;li&gt;module-web-bootstrap: 构成平台的bootstrap包，依赖于module-web。&lt;/li&gt;
+&lt;li&gt;module-web-easyui: 构成平台的easyui包，依赖于module-web。&lt;/li&gt;
 &lt;li&gt;module-web-extjs: 构成平台的extjs包，依赖于module-web。&lt;/li&gt;
 &lt;li&gt;module-security: 构成平台的安全包，依赖于module-web。&lt;/li&gt;
 &lt;li&gt;extension-cms: 扩展平台包。包含cms的功能。引入该包即拥有cms功能。&lt;/li&gt;
 &lt;li&gt;extension-mall: 扩展平台包。包含商城及支付等功能。引入该包即拥有商城功能。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;u4EE3_u7801_u5730_u5740&quot;&gt;&lt;a href=&quot;#u4EE3_u7801_u5730_u5740&quot; class=&quot;headerlink&quot; title=&quot;代码地址&quot;&gt;&lt;/a&gt;代码地址&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/xiangxik/java-platform&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/xiangxik/java-platform&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://git.oschina.net/xiangxik/java-platform&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://git.oschina.net/xiangxik/java-platform&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;extension-wechat: 扩展平台包。包含微信网站的展示和微信相关功能。&lt;/li&gt;
 &lt;/ul&gt;
 </content>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;h2 id=&quot;intro&quot;&gt;前言&lt;/h2&gt;基于servlet3.1的模块化规范，采用spring, spring mvc, jpa, spring data, shiro, fastjson, beetl等开源技术，搭建了一套可模块化扩展的java框架，并使用extjs6实现了后台管理的公共功能。&lt;br&gt;
+      &lt;p&gt;&lt;h2 id=&quot;intro&quot;&gt;前言&lt;/h2&gt;基于servlet3.1的模块化规范，采用spring, spring mvc, jpa, spring data, querydsl, shiro, fastjson, beetl等开源技术，搭建了一套可模块化扩展的java框架，并可选择地使用extjs6、easyui、bootstrap实现了后台管理的公共功能。&lt;br&gt;
     
     </summary>
     
@@ -145,25 +329,15 @@
     <link href="http://xiangxik.github.io/2016/01/01/start/"/>
     <id>http://xiangxik.github.io/2016/01/01/start/</id>
     <published>2015-12-31T16:05:50.000Z</published>
-    <updated>2016-01-30T16:13:07.596Z</updated>
+    <updated>2016-03-19T12:53:49.947Z</updated>
     
     <content type="html">&lt;p&gt;第一篇博客。在2016年的第一天。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;今年的几个目标&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;完成2个以上中型项目。&lt;/li&gt;
-&lt;li&gt;完善web框架。&lt;/li&gt;
-&lt;li&gt;完善app框架。&lt;/li&gt;
-&lt;li&gt;获得融资，进行产品研发。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/blockquote&gt;
 </content>
     
     <summary type="html">
     
       &lt;p&gt;第一篇博客。在2016年的第一天。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;今年的几个目标&lt;br&gt;
+
     
     </summary>
     

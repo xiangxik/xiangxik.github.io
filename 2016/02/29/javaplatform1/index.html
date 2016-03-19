@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>静态模块化java开发平台 1.概述 | 孔祥溪的博客</title>
+  <title>java平台 1.概述 | 孔祥溪的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前言基于servlet3.1的模块化规范，采用spring, spring mvc, jpa, spring data, shiro, fastjson, beetl等开源技术，搭建了一套可模块化扩展的java框架，并使用extjs6实现了后台管理的公共功能。">
+  <meta name="description" content="前言基于servlet3.1的模块化规范，采用spring, spring mvc, jpa, spring data, querydsl, shiro, fastjson, beetl等开源技术，搭建了一套可模块化扩展的java框架，并可选择地使用extjs6、easyui、bootstrap实现了后台管理的公共功能。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="静态模块化java开发平台 1.概述">
+<meta property="og:title" content="java平台 1.概述">
 <meta property="og:url" content="http://xiangxik.github.io/2016/02/29/javaplatform1/index.html">
 <meta property="og:site_name" content="孔祥溪的博客">
-<meta property="og:description" content="前言基于servlet3.1的模块化规范，采用spring, spring mvc, jpa, spring data, shiro, fastjson, beetl等开源技术，搭建了一套可模块化扩展的java框架，并使用extjs6实现了后台管理的公共功能。">
-<meta property="og:updated_time" content="2016-03-18T16:12:01.611Z">
+<meta property="og:description" content="前言基于servlet3.1的模块化规范，采用spring, spring mvc, jpa, spring data, querydsl, shiro, fastjson, beetl等开源技术，搭建了一套可模块化扩展的java框架，并可选择地使用extjs6、easyui、bootstrap实现了后台管理的公共功能。">
+<meta property="og:updated_time" content="2016-03-19T14:04:26.257Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="静态模块化java开发平台 1.概述">
-<meta name="twitter:description" content="前言基于servlet3.1的模块化规范，采用spring, spring mvc, jpa, spring data, shiro, fastjson, beetl等开源技术，搭建了一套可模块化扩展的java框架，并使用extjs6实现了后台管理的公共功能。">
+<meta name="twitter:title" content="java平台 1.概述">
+<meta name="twitter:description" content="前言基于servlet3.1的模块化规范，采用spring, spring mvc, jpa, spring data, querydsl, shiro, fastjson, beetl等开源技术，搭建了一套可模块化扩展的java框架，并可选择地使用extjs6、easyui、bootstrap实现了后台管理的公共功能。">
   
     <link rel="alternative" href="/atom.xml" title="孔祥溪的博客" type="application/atom+xml">
   
@@ -167,7 +167,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <a href="/tags/extjs/" style="font-size: 10px;">extjs</a> <a href="/tags/java/" style="font-size: 10px;">java</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a>
+                        <a href="/tags/extjs/" style="font-size: 10px;">extjs</a> <a href="/tags/java/" style="font-size: 20px;">java</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a>
                     </div>
                 </section>
                 
@@ -264,7 +264,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      静态模块化java开发平台 1.概述
+      java平台 1.概述
     </h1>
   
 
@@ -289,15 +289,17 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p></p><h2 id="intro">前言</h2>基于servlet3.1的模块化规范，采用spring, spring mvc, jpa, spring data, shiro, fastjson, beetl等开源技术，搭建了一套可模块化扩展的java框架，并使用extjs6实现了后台管理的公共功能。<br><a id="more"></a><p></p>
+        <p></p><h2 id="intro">前言</h2>基于servlet3.1的模块化规范，采用spring, spring mvc, jpa, spring data, querydsl, shiro, fastjson, beetl等开源技术，搭建了一套可模块化扩展的java框架，并可选择地使用extjs6、easyui、bootstrap实现了后台管理的公共功能。<br><a id="more"></a><p></p>
 <div class="github-widget" data-repo="xiangxik/java-platform"></div>
 
 <h2 id="u7279_u70B9"><a href="#u7279_u70B9" class="headerlink" title="特点"></a>特点</h2><ul>
 <li>基于目前最新的一些java技术</li>
-<li>采用Java8的语法。</li>
+<li>采用Java8的语法</li>
+<li>自定义模块化，自定义配置</li>
 <li>主要模块化的思想是来自于servlet3.1规范的web集成机制</li>
 <li>可扩展模块，通过引入jar包来决定是否采用该功能</li>
 <li>采用spring javaconfig.达到0spring配置文件</li>
+<li>采用querydsl通用查询</li>
 <li>包含通用的后台管理功能</li>
 </ul>
 <h2 id="u5DE5_u7A0B_u7528_u9014_u8BF4_u660E"><a href="#u5DE5_u7A0B_u7528_u9014_u8BF4_u660E" class="headerlink" title="工程用途说明"></a>工程用途说明</h2><ul>
@@ -305,14 +307,13 @@
 <li>module-base: 构成平台的基础包。</li>
 <li>module-domain: 构成平台的领域数据操作包，依赖于module-base。</li>
 <li>module-web: 构成平台的web功能包，依赖于module-domain。</li>
+<li>module-web-bootstrap: 构成平台的bootstrap包，依赖于module-web。</li>
+<li>module-web-easyui: 构成平台的easyui包，依赖于module-web。</li>
 <li>module-web-extjs: 构成平台的extjs包，依赖于module-web。</li>
 <li>module-security: 构成平台的安全包，依赖于module-web。</li>
 <li>extension-cms: 扩展平台包。包含cms的功能。引入该包即拥有cms功能。</li>
 <li>extension-mall: 扩展平台包。包含商城及支付等功能。引入该包即拥有商城功能。</li>
-</ul>
-<h2 id="u4EE3_u7801_u5730_u5740"><a href="#u4EE3_u7801_u5730_u5740" class="headerlink" title="代码地址"></a>代码地址</h2><ul>
-<li><a href="https://github.com/xiangxik/java-platform" target="_blank" rel="external">https://github.com/xiangxik/java-platform</a></li>
-<li><a href="https://git.oschina.net/xiangxik/java-platform" target="_blank" rel="external">https://git.oschina.net/xiangxik/java-platform</a></li>
+<li>extension-wechat: 扩展平台包。包含微信网站的展示和微信相关功能。</li>
 </ul>
 
       
@@ -322,12 +323,12 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2016/02/29/javaplatform1/">静态模块化java开发平台 1.概述</a></p>
+        <p><span>本文标题:</span><a href="/2016/02/29/javaplatform1/">java平台 1.概述</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 孔祥溪 的个人博客">孔祥溪</a></p>
         <p><span>发布时间:</span>2016年02月29日 - 17时25分</p>
-        <p><span>最后更新:</span>2016年03月19日 - 00时12分</p>
+        <p><span>最后更新:</span>2016年03月19日 - 22时04分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2016/02/29/javaplatform1/" title="静态模块化java开发平台 1.概述">http://xiangxik.github.io/2016/02/29/javaplatform1/</a>
+            <span>原始链接:</span><a class="post-url" href="/2016/02/29/javaplatform1/" title="java平台 1.概述">http://xiangxik.github.io/2016/02/29/javaplatform1/</a>
             <span class="copy-path" data-clipboard-text="原文: http://xiangxik.github.io/2016/02/29/javaplatform1/　　作者: 孔祥溪" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
@@ -340,6 +341,12 @@
 
 
     <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2016/03/19/javaplatform2/">
+                    java平台 2.开始使用
+                </a>
+            </div>
         
         
             <div id="article-nav-older" class="article-nav-title">
@@ -355,7 +362,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#intro"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u7279_u70B9"><span class="toc-number">2.</span> <span class="toc-text">特点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u5DE5_u7A0B_u7528_u9014_u8BF4_u660E"><span class="toc-number">3.</span> <span class="toc-text">工程用途说明</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u4EE3_u7801_u5730_u5740"><span class="toc-number">4.</span> <span class="toc-text">代码地址</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#intro"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u7279_u70B9"><span class="toc-number">2.</span> <span class="toc-text">特点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u5DE5_u7A0B_u7528_u9014_u8BF4_u660E"><span class="toc-number">3.</span> <span class="toc-text">工程用途说明</span></a></li></ol>
 </div>
 <style>
     .left-col .switch-btn {
@@ -417,7 +424,7 @@
     
       <div class="duoshuo" id="comments">
     <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="2016/02/29/javaplatform1/" data-title="静态模块化java开发平台 1.概述" data-url="http://xiangxik.github.io/2016/02/29/javaplatform1/"></div>
+    <div class="ds-thread" data-thread-key="2016/02/29/javaplatform1/" data-title="java平台 1.概述" data-url="http://xiangxik.github.io/2016/02/29/javaplatform1/"></div>
     <!-- 多说评论框 end -->
     <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
     <script type="text/javascript">
@@ -441,7 +448,9 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+            <a href="/2016/03/19/javaplatform2/" title="上一篇: java平台 2.开始使用">
+                <i class="fa fa-angle-left"></i>
+            </a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
@@ -453,7 +462,7 @@
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/02/29/javaplatform1/">静态模块化java开发平台 1.概述</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/28/centos6.5_base/">CentOS6.5基本配置</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/30/extjs6_by_example1/">《Ext JS 6 By Example》 章节1. 开始使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/01/start/">开篇</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/03/19/javaplatform4/">java平台 4.混合式配置</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/19/javaplatform3/">java平台 3.模块化的实现原理</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/19/javaplatform2/">java平台 2.开始使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/29/javaplatform1/">java平台 1.概述</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/28/centos6.5_base/">CentOS6.5基本配置</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/30/extjs6_by_example1/">《Ext JS 6 By Example》 章节1. 开始使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/01/start/">开篇</a></li></ul>
 
 
 
