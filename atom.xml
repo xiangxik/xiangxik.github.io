@@ -5,7 +5,7 @@
   <link href="//atom.xml" rel="self"/>
   
   <link href="http://xiangxik.github.io/"/>
-  <updated>2016-03-19T14:24:06.242Z</updated>
+  <updated>2016-05-09T15:20:30.282Z</updated>
   <id>http://xiangxik.github.io/</id>
   
   <author>
@@ -14,6 +14,65 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Infinispan缓存</title>
+    <link href="http://xiangxik.github.io/2016/05/08/infinispan_start/"/>
+    <id>http://xiangxik.github.io/2016/05/08/infinispan_start/</id>
+    <published>2016-05-08T03:43:13.000Z</published>
+    <updated>2016-05-09T15:20:30.282Z</updated>
+    
+    <content type="html">&lt;p&gt;&lt;/p&gt;&lt;h2 id=&quot;intro&quot;&gt;开始&lt;/h2&gt;Infinispan 是个开源的数据网格平台。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;p&gt;&lt;/p&gt;
+&lt;h1 id=&quot;u7B80_u4ECB&quot;&gt;&lt;a href=&quot;#u7B80_u4ECB&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h1&gt;&lt;h2 id=&quot;u8FD0_u884C_u73AF_u5883&quot;&gt;&lt;a href=&quot;#u8FD0_u884C_u73AF_u5883&quot; class=&quot;headerlink&quot; title=&quot;运行环境&quot;&gt;&lt;/a&gt;运行环境&lt;/h2&gt;&lt;p&gt;Infinispan可以在以下环境中运行：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Java SE 应用&lt;/li&gt;
+&lt;li&gt;单独的一个应用服务器，把Infinispan作为一个服务启动。（譬如JBoss AS）&lt;/li&gt;
+&lt;li&gt;作为你的应用的一个库，作为应用服务器发布， 和你的应用一起启动。（举个栗子，你可以使用在Tomcat或GlassFish中使用Infinispan）&lt;/li&gt;
+&lt;li&gt;在OSGI运行环境中（例如Apache Karaf）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;u6A21_u5F0F&quot;&gt;&lt;a href=&quot;#u6A21_u5F0F&quot; class=&quot;headerlink&quot; title=&quot;模式&quot;&gt;&lt;/a&gt;模式&lt;/h2&gt;&lt;p&gt;Infinispan提供四种操作模式，决定了如何存储数据和把数据存放到哪里。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;本地（Local)，实体只存储在本地节点，不管是否在集群里面。在这个模式，Infinispan就像本地缓存那样操作。&lt;/li&gt;
+&lt;li&gt;失效（Invalidation），所有的实体只存放在缓存仓库（例如数据库），当一个节点加载数据时，将会从仓库取得。在这个模式，Infinispan就像一个分布式缓存那样操作，&lt;/li&gt;
+&lt;li&gt;复制（Replication），所有数据将会复制到所有节点。在这个模式，Infinispan就像操作一个数据网格或者临时数据仓库，但不会增加内存空间。&lt;/li&gt;
+&lt;li&gt;分布式（Distribution），数据只分布于某个子节点，在这种模式下Infinispan的通常是作为一个数据网格，并且内存相应增加了。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;u4EA4_u4E92&quot;&gt;&lt;a href=&quot;#u4EA4_u4E92&quot; class=&quot;headerlink&quot; title=&quot;交互&quot;&gt;&lt;/a&gt;交互&lt;/h2&gt;&lt;p&gt;Infinispan提供2种访问模式， 都可以运用于任何的运行环境：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;内嵌在你的应用代码中&lt;/li&gt;
+&lt;li&gt;作为一个远程的服务给客户端调用（支持REST, memcached、Hot Rod wire协议）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;u4E0B_u8F7D_u548C_u5B89_u88C5Infinispan&quot;&gt;&lt;a href=&quot;#u4E0B_u8F7D_u548C_u5B89_u88C5Infinispan&quot; class=&quot;headerlink&quot; title=&quot;下载和安装Infinispan&quot;&gt;&lt;/a&gt;下载和安装Infinispan&lt;/h1&gt;&lt;p&gt;要运行Infinispan，你必须符合以下条件：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;jdk1.8+ （OpenJDK、Oracle Java SE、Oracle JRockit皆可）&lt;/li&gt;
+&lt;li&gt;maven 3.2+，如果你使用maven来构建你的项目&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;u4E0B_u8F7DInfinispan&quot;&gt;&lt;a href=&quot;#u4E0B_u8F7DInfinispan&quot; class=&quot;headerlink&quot; title=&quot;下载Infinispan&quot;&gt;&lt;/a&gt;下载Infinispan&lt;/h2&gt;&lt;p&gt;maven:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;
+&amp;lt;dependency&amp;gt; 
+    &amp;lt;groupId&amp;gt;org.infinispan&amp;lt;/groupId&amp;gt; 
+    &amp;lt;artifactId&amp;gt;infinispan-embedded&amp;lt;/artifactId&amp;gt; 
+    &amp;lt;version&amp;gt;8.2.0.Final&amp;lt;/version&amp;gt; 
+&amp;lt;/dependency&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+
+
+
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;h2 id=&quot;intro&quot;&gt;开始&lt;/h2&gt;Infinispan 是个开源的数据网格平台。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="缓存" scheme="http://xiangxik.github.io/categories/%E7%BC%93%E5%AD%98/"/>
+    
+    
+      <category term="java" scheme="http://xiangxik.github.io/tags/java/"/>
+    
+  </entry>
   
   <entry>
     <title>java平台 4.混合式配置</title>
@@ -203,7 +262,7 @@ jdbc.password=abcdefg
     <link href="http://xiangxik.github.io/2016/02/29/javaplatform1/"/>
     <id>http://xiangxik.github.io/2016/02/29/javaplatform1/</id>
     <published>2016-02-29T09:25:49.000Z</published>
-    <updated>2016-03-19T14:04:26.257Z</updated>
+    <updated>2016-04-28T15:36:35.737Z</updated>
     
     <content type="html">&lt;p&gt;&lt;/p&gt;&lt;h2 id=&quot;intro&quot;&gt;前言&lt;/h2&gt;基于servlet3.1的模块化规范，采用spring, spring mvc, jpa, spring data, querydsl, shiro, fastjson, beetl等开源技术，搭建了一套可模块化扩展的java框架，并可选择地使用extjs6、easyui、bootstrap实现了后台管理的公共功能。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;p&gt;&lt;/p&gt;
 &lt;div class=&quot;github-widget&quot; data-repo=&quot;xiangxik/java-platform&quot;&gt;&lt;/div&gt;
@@ -219,9 +278,13 @@ jdbc.password=abcdefg
 &lt;li&gt;包含通用的后台管理功能&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&quot;u5DE5_u7A0B_u7528_u9014_u8BF4_u660E&quot;&gt;&lt;a href=&quot;#u5DE5_u7A0B_u7528_u9014_u8BF4_u660E&quot; class=&quot;headerlink&quot; title=&quot;工程用途说明&quot;&gt;&lt;/a&gt;工程用途说明&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;application-centralize: 平台包，项目引入该包即可包含了主要功能，依赖于全部module包。&lt;/li&gt;
+&lt;li&gt;application: 平台包，项目引入该包即可包含了主要功能，依赖于全部关键module包。&lt;/li&gt;
 &lt;li&gt;module-base: 构成平台的基础包。&lt;/li&gt;
 &lt;li&gt;module-domain: 构成平台的领域数据操作包，依赖于module-base。&lt;/li&gt;
+&lt;li&gt;module-cache: 构成平台的缓存功能包，依赖于module-domain。&lt;/li&gt;
+&lt;li&gt;module-mongodb: mongodb功能包。&lt;/li&gt;
+&lt;li&gt;module-netty: netty功能包。&lt;/li&gt;
+&lt;li&gt;module-redis: redis功能包。&lt;/li&gt;
 &lt;li&gt;module-web: 构成平台的web功能包，依赖于module-domain。&lt;/li&gt;
 &lt;li&gt;module-web-bootstrap: 构成平台的bootstrap包，依赖于module-web。&lt;/li&gt;
 &lt;li&gt;module-web-easyui: 构成平台的easyui包，依赖于module-web。&lt;/li&gt;
@@ -230,6 +293,8 @@ jdbc.password=abcdefg
 &lt;li&gt;extension-cms: 扩展平台包。包含cms的功能。引入该包即拥有cms功能。&lt;/li&gt;
 &lt;li&gt;extension-mall: 扩展平台包。包含商城及支付等功能。引入该包即拥有商城功能。&lt;/li&gt;
 &lt;li&gt;extension-wechat: 扩展平台包。包含微信网站的展示和微信相关功能。&lt;/li&gt;
+&lt;li&gt;plugin-base: 插件基础包。&lt;/li&gt;
+&lt;li&gt;plugin-payment: 支付插件包。&lt;/li&gt;
 &lt;/ul&gt;
 </content>
     
