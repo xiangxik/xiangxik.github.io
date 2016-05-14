@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://xiangxik.github.io/2016/03/19/javaplatform2/</loc>
+    
+    <lastmod>2016-05-14T16:58:27.559Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://xiangxik.github.io/2016/05/08/infinispan_start/</loc>
     
     <lastmod>2016-05-09T15:20:30.282Z</lastmod>
@@ -26,13 +33,6 @@
     <loc>http://xiangxik.github.io/2016/03/19/javaplatform4/</loc>
     
     <lastmod>2016-03-19T14:24:06.242Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://xiangxik.github.io/2016/03/19/javaplatform2/</loc>
-    
-    <lastmod>2016-03-19T14:23:53.240Z</lastmod>
     
   </url>
   

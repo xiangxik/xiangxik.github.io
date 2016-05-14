@@ -14,7 +14,7 @@
 <meta property="og:image" content="http://xiangxik.github.io/img/javaplatform/2-1.jpg">
 <meta property="og:image" content="http://xiangxik.github.io/img/javaplatform/2-2.jpg">
 <meta property="og:image" content="http://xiangxik.github.io/img/javaplatform/2-3.jpg">
-<meta property="og:updated_time" content="2016-03-19T14:23:53.240Z">
+<meta property="og:updated_time" content="2016-05-14T16:58:27.559Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="java平台 2.开始使用">
 <meta name="twitter:description" content="开始要使用一个开发平台，首要事情就是把系统部署起来，并能进行最基本的增删改查。该平台的搭建和进行增删改查是十分的简单的事情。下面我们来一步一步地把系统建立起来。">
@@ -314,78 +314,16 @@
 <ul>
 <li>修改pom.xml文件</li>
 </ul>
-<pre><code>
-&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
-    xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;
-    &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
-    &lt;parent&gt;
-        &lt;groupId&gt;com.whenling&lt;/groupId&gt;
-        &lt;artifactId&gt;java-platform&lt;/artifactId&gt;
-        &lt;version&gt;1.0.0.RELEASE&lt;/version&gt;
-    &lt;/parent&gt;
-    &lt;artifactId&gt;example-1&lt;/artifactId&gt;
-    &lt;version&gt;1.0.0&lt;/version&gt;
-    &lt;packaging&gt;war&lt;/packaging&gt;
-
-    &lt;dependencies&gt;
-        &lt;dependency&gt;
-            &lt;groupId&gt;com.whenling&lt;/groupId&gt;
-            &lt;artifactId&gt;application-centralize&lt;/artifactId&gt;
-            &lt;version&gt;1.0.0.RELEASE&lt;/version&gt;
-        &lt;/dependency&gt;
-    &lt;/dependencies&gt;
-
-    &lt;build&gt;
-        &lt;plugins&gt;
-            &lt;plugin&gt;
-                &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
-                &lt;artifactId&gt;maven-war-plugin&lt;/artifactId&gt;
-                &lt;configuration&gt;
-                    &lt;!-- web.xml is not mandatory since JavaEE 5 --&gt;
-                    &lt;failOnMissingWebXml&gt;false&lt;/failOnMissingWebXml&gt;
-                &lt;/configuration&gt;
-            &lt;/plugin&gt;
-        &lt;/plugins&gt;
-    &lt;/build&gt;
-&lt;/project&gt;
-</code></pre>
-
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">project</span> <span class="attribute">xmlns</span>=<span class="value">"http://maven.apache.org/POM/4.0.0"</span> <span class="attribute">xmlns:xsi</span>=<span class="value">"http://www.w3.org/2001/XMLSchema-instance"</span> <span class="attribute">xsi:schemaLocation</span>=<span class="value">"http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">modelVersion</span>&gt;</span>4.0.0<span class="tag">&lt;/<span class="title">modelVersion</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">parent</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="title">groupId</span>&gt;</span>com.whenling<span class="tag">&lt;/<span class="title">groupId</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="title">artifactId</span>&gt;</span>java-platform<span class="tag">&lt;/<span class="title">artifactId</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="title">version</span>&gt;</span>1.0.0.RELEASE<span class="tag">&lt;/<span class="title">version</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="title">parent</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">artifactId</span>&gt;</span>whenling-platform<span class="tag">&lt;/<span class="title">artifactId</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">packaging</span>&gt;</span>war<span class="tag">&lt;/<span class="title">packaging</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">dependencies</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="title">dependency</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="title">groupId</span>&gt;</span>com.whenling<span class="tag">&lt;/<span class="title">groupId</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="title">artifactId</span>&gt;</span>application<span class="tag">&lt;/<span class="title">artifactId</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="title">version</span>&gt;</span>1.0.0.RELEASE<span class="tag">&lt;/<span class="title">version</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;/<span class="title">dependency</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="title">dependencies</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">build</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="title">plugins</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="title">plugin</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="title">groupId</span>&gt;</span>org.apache.maven.plugins<span class="tag">&lt;/<span class="title">groupId</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="title">artifactId</span>&gt;</span>maven-war-plugin<span class="tag">&lt;/<span class="title">artifactId</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="title">configuration</span>&gt;</span></span><br><span class="line">					<span class="comment">&lt;!-- web.xml is not mandatory since JavaEE 5 --&gt;</span></span><br><span class="line">					<span class="tag">&lt;<span class="title">failOnMissingWebXml</span>&gt;</span>false<span class="tag">&lt;/<span class="title">failOnMissingWebXml</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;/<span class="title">configuration</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;/<span class="title">plugin</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;/<span class="title">plugins</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="title">build</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">project</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li>新建初始化器。为了加载自定义的配置文件</li>
 </ul>
-<pre><code>
-package com.whenling.example1;
-
-import javax.servlet.ServletContext;
-import javax.servlet.ServletException;
-
-import org.springframework.core.Ordered;
-import org.springframework.core.annotation.Order;
-import org.springframework.web.WebApplicationInitializer;
-
-import com.whenling.module.base.config.StaticConfigurationSupplier;
-
-@Order(Ordered.LOWEST_PRECEDENCE)
-public class ExampleInitializer implements WebApplicationInitializer {
-
-    @Override
-    public void onStartup(ServletContext servletContext) throws ServletException {
-        StaticConfigurationSupplier.prepend("config.properties");
-    }
-
-}
-</code></pre>
-
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.whenling.example1;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.servlet.ServletContext;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.ServletException;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.springframework.core.Ordered;</span><br><span class="line"><span class="keyword">import</span> org.springframework.core.annotation.Order;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.WebApplicationInitializer;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.whenling.module.base.config.StaticConfigurationSupplier;</span><br><span class="line"></span><br><span class="line"><span class="annotation">@Order</span>(Ordered.LOWEST_PRECEDENCE)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ExampleInitializer</span> <span class="keyword">implements</span> <span class="title">WebApplicationInitializer</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="annotation">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onStartup</span><span class="params">(ServletContext servletContext)</span> <span class="keyword">throws</span> ServletException </span>&#123;</span><br><span class="line">		StaticConfigurationSupplier.prepend(<span class="string">"config.properties"</span>);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <ul>
 <li>创建配置文件config.properties</li>
 </ul>
 <p>需要相应地创建此数据库。</p>
-<pre><code>
-jdbc.url=jdbc:mysql://localhost:3306/platform?useUnicode=true&characterEncoding=utf-8
-jdbc.username=root
-jdbc.password=abcdefg
-</code></pre>
-
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jdbc.url=jdbc:mysql://localhost:3306/platform?useUnicode=true&#38;characterEncoding=utf-8&#10;jdbc.username=root&#10;jdbc.password=abcdefg</span><br></pre></td></tr></table></figure>
 <ul>
 <li>在webapp下创建WEB-INF文件夹</li>
 </ul>
@@ -411,7 +349,7 @@ jdbc.password=abcdefg
         <p><span>本文标题:</span><a href="/2016/03/19/javaplatform2/">java平台 2.开始使用</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">孔祥溪</a></p>
         <p><span>发布时间:</span>2016-03-19, 20:54:44</p>
-        <p><span>最后更新:</span>2016-03-19, 22:23:53</p>
+        <p><span>最后更新:</span>2016-05-15, 00:58:27</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2016/03/19/javaplatform2/" title="java平台 2.开始使用">http://xiangxik.github.io/2016/03/19/javaplatform2/</a>
             <span class="copy-path" data-clipboard-text="原文: http://xiangxik.github.io/2016/03/19/javaplatform2/　　作者: 孔祥溪" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
