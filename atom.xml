@@ -136,33 +136,13 @@
     <link href="http://xiangxik.github.io/2016/04/24/castle/"/>
     <id>http://xiangxik.github.io/2016/04/24/castle/</id>
     <published>2016-04-24T04:35:39.000Z</published>
-    <updated>2016-06-21T05:39:04.247Z</updated>
+    <updated>2016-06-21T05:53:48.917Z</updated>
     
     <content type="html">&lt;p&gt;&lt;/p&gt;&lt;h2 id=&quot;intro&quot;&gt;前言&lt;/h2&gt;Castle的目标是打造一个高性能、高扩展性的java开发平台，适合于开发各种互联网软件产品。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;p&gt;&lt;/p&gt;
 &lt;div class=&quot;github-widget&quot; data-repo=&quot;xiangxik/castle&quot;&gt;&lt;/div&gt;
 
-&lt;h2 id=&quot;u7279_u70B9&quot;&gt;&lt;a href=&quot;#u7279_u70B9&quot; class=&quot;headerlink&quot; title=&quot;特点&quot;&gt;&lt;/a&gt;特点&lt;/h2&gt;&lt;p&gt;*&lt;/p&gt;
-&lt;ul&gt;
+&lt;h2 id=&quot;u7279_u70B9&quot;&gt;&lt;a href=&quot;#u7279_u70B9&quot; class=&quot;headerlink&quot; title=&quot;特点&quot;&gt;&lt;/a&gt;特点&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;可以采用单一服务集成，也可选择地使用第三方服务管理框架（例如dubbo）。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;u5DE5_u7A0B_u7528_u9014_u8BF4_u660E&quot;&gt;&lt;a href=&quot;#u5DE5_u7A0B_u7528_u9014_u8BF4_u660E&quot; class=&quot;headerlink&quot; title=&quot;工程用途说明&quot;&gt;&lt;/a&gt;工程用途说明&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;application: 平台包，项目引入该包即可包含了主要功能，依赖于全部关键module包。&lt;/li&gt;
-&lt;li&gt;module-base: 构成平台的基础包。&lt;/li&gt;
-&lt;li&gt;module-domain: 构成平台的领域数据操作包，依赖于module-base。&lt;/li&gt;
-&lt;li&gt;module-cache: 构成平台的缓存功能包，依赖于module-domain。&lt;/li&gt;
-&lt;li&gt;module-mongodb: mongodb功能包。&lt;/li&gt;
-&lt;li&gt;module-netty: netty功能包。&lt;/li&gt;
-&lt;li&gt;module-redis: redis功能包。&lt;/li&gt;
-&lt;li&gt;module-web: 构成平台的web功能包，依赖于module-domain。&lt;/li&gt;
-&lt;li&gt;module-web-bootstrap: 构成平台的bootstrap包，依赖于module-web。&lt;/li&gt;
-&lt;li&gt;module-web-easyui: 构成平台的easyui包，依赖于module-web。&lt;/li&gt;
-&lt;li&gt;module-web-extjs: 构成平台的extjs包，依赖于module-web。&lt;/li&gt;
-&lt;li&gt;module-security: 构成平台的安全包，依赖于module-web。&lt;/li&gt;
-&lt;li&gt;extension-cms: 扩展平台包。包含cms的功能。引入该包即拥有cms功能。&lt;/li&gt;
-&lt;li&gt;extension-mall: 扩展平台包。包含商城及支付等功能。引入该包即拥有商城功能。&lt;/li&gt;
-&lt;li&gt;extension-wechat: 扩展平台包。包含微信网站的展示和微信相关功能。&lt;/li&gt;
-&lt;li&gt;plugin-base: 插件基础包。&lt;/li&gt;
-&lt;li&gt;plugin-payment: 支付插件包。&lt;/li&gt;
 &lt;/ul&gt;
 </content>
     
