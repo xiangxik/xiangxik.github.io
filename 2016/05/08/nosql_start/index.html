@@ -3,18 +3,33 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Infinispan缓存 | 孔祥溪的博客</title>
+  <title>NoSQL的认识 | 孔祥溪的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="开始Infinispan 是个开源的数据网格平台。">
+  <meta name="description" content="主流的NoSQL有以下四大分类：
+
+键值数据库
+列存储数据库
+文档型数据库
+图形数据库">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Infinispan缓存">
-<meta property="og:url" content="http://xiangxik.github.io/2016/05/08/infinispan_start/index.html">
+<meta property="og:title" content="NoSQL的认识">
+<meta property="og:url" content="http://xiangxik.github.io/2016/05/08/nosql_start/index.html">
 <meta property="og:site_name" content="孔祥溪的博客">
-<meta property="og:description" content="开始Infinispan 是个开源的数据网格平台。">
-<meta property="og:updated_time" content="2016-05-09T15:20:30.282Z">
+<meta property="og:description" content="主流的NoSQL有以下四大分类：
+
+键值数据库
+列存储数据库
+文档型数据库
+图形数据库">
+<meta property="og:updated_time" content="2016-06-21T05:37:13.929Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Infinispan缓存">
-<meta name="twitter:description" content="开始Infinispan 是个开源的数据网格平台。">
+<meta name="twitter:title" content="NoSQL的认识">
+<meta name="twitter:description" content="主流的NoSQL有以下四大分类：
+
+键值数据库
+列存储数据库
+文档型数据库
+图形数据库">
   
     <link rel="alternative" href="/atom.xml" title="孔祥溪的博客" type="application/atom+xml">
   
@@ -172,7 +187,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/extjs/">extjs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/">java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a></li></ul>
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/">java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a></li></ul>
                     </div>
                 </section>
                 
@@ -257,10 +272,10 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="post-infinispan_start" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-nosql_start" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/05/08/infinispan_start/" class="article-date">
+      <a href="/2016/05/08/nosql_start/" class="article-date">
       <time datetime="2016-05-08T03:43:13.000Z" itemprop="datePublished">2016-05-08</time>
 </a>
     </div>
@@ -274,7 +289,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Infinispan缓存
+      NoSQL的认识
     </h1>
   
 
@@ -283,15 +298,11 @@
       <div class="article-info article-info-post">
         
     <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/缓存/">缓存</a>
+    <a class="article-category-link" href="/categories/NoSQL/">NoSQL</a>
     </div>
 
 
         
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li></ul>
-    </div>
-
         <div class="clearfix"></div>
       </div>
       
@@ -299,43 +310,13 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p></p><h2 id="intro">开始</h2>Infinispan 是个开源的数据网格平台。<br><a id="more"></a><p></p>
-<h1 id="u7B80_u4ECB"><a href="#u7B80_u4ECB" class="headerlink" title="简介"></a>简介</h1><h2 id="u8FD0_u884C_u73AF_u5883"><a href="#u8FD0_u884C_u73AF_u5883" class="headerlink" title="运行环境"></a>运行环境</h2><p>Infinispan可以在以下环境中运行：</p>
+        <p>主流的NoSQL有以下四大分类：</p>
 <ul>
-<li>Java SE 应用</li>
-<li>单独的一个应用服务器，把Infinispan作为一个服务启动。（譬如JBoss AS）</li>
-<li>作为你的应用的一个库，作为应用服务器发布， 和你的应用一起启动。（举个栗子，你可以使用在Tomcat或GlassFish中使用Infinispan）</li>
-<li>在OSGI运行环境中（例如Apache Karaf）</li>
+<li>键值数据库</li>
+<li>列存储数据库</li>
+<li>文档型数据库</li>
+<li>图形数据库</li>
 </ul>
-<h2 id="u6A21_u5F0F"><a href="#u6A21_u5F0F" class="headerlink" title="模式"></a>模式</h2><p>Infinispan提供四种操作模式，决定了如何存储数据和把数据存放到哪里。</p>
-<ul>
-<li>本地（Local)，实体只存储在本地节点，不管是否在集群里面。在这个模式，Infinispan就像本地缓存那样操作。</li>
-<li>失效（Invalidation），所有的实体只存放在缓存仓库（例如数据库），当一个节点加载数据时，将会从仓库取得。在这个模式，Infinispan就像一个分布式缓存那样操作，</li>
-<li>复制（Replication），所有数据将会复制到所有节点。在这个模式，Infinispan就像操作一个数据网格或者临时数据仓库，但不会增加内存空间。</li>
-<li>分布式（Distribution），数据只分布于某个子节点，在这种模式下Infinispan的通常是作为一个数据网格，并且内存相应增加了。</li>
-</ul>
-<h2 id="u4EA4_u4E92"><a href="#u4EA4_u4E92" class="headerlink" title="交互"></a>交互</h2><p>Infinispan提供2种访问模式， 都可以运用于任何的运行环境：</p>
-<ul>
-<li>内嵌在你的应用代码中</li>
-<li>作为一个远程的服务给客户端调用（支持REST, memcached、Hot Rod wire协议）</li>
-</ul>
-<h1 id="u4E0B_u8F7D_u548C_u5B89_u88C5Infinispan"><a href="#u4E0B_u8F7D_u548C_u5B89_u88C5Infinispan" class="headerlink" title="下载和安装Infinispan"></a>下载和安装Infinispan</h1><p>要运行Infinispan，你必须符合以下条件：</p>
-<ul>
-<li>jdk1.8+ （OpenJDK、Oracle Java SE、Oracle JRockit皆可）</li>
-<li>maven 3.2+，如果你使用maven来构建你的项目</li>
-</ul>
-<h2 id="u4E0B_u8F7DInfinispan"><a href="#u4E0B_u8F7DInfinispan" class="headerlink" title="下载Infinispan"></a>下载Infinispan</h2><p>maven:</p>
-<pre><code>
-&lt;dependency&gt; 
-    &lt;groupId&gt;org.infinispan&lt;/groupId&gt; 
-    &lt;artifactId&gt;infinispan-embedded&lt;/artifactId&gt; 
-    &lt;version&gt;8.2.0.Final&lt;/version&gt; 
-&lt;/dependency&gt;
-</code></pre>
-
-
-
-
 
       
     </div>
@@ -344,13 +325,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2016/05/08/infinispan_start/">Infinispan缓存</a></p>
+        <p><span>本文标题:</span><a href="/2016/05/08/nosql_start/">NoSQL的认识</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">孔祥溪</a></p>
         <p><span>发布时间:</span>2016-05-08, 11:43:13</p>
-        <p><span>最后更新:</span>2016-05-09, 23:20:30</p>
+        <p><span>最后更新:</span>2016-06-21, 13:37:13</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2016/05/08/infinispan_start/" title="Infinispan缓存">http://xiangxik.github.io/2016/05/08/infinispan_start/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://xiangxik.github.io/2016/05/08/infinispan_start/　　作者: 孔祥溪" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2016/05/08/nosql_start/" title="NoSQL的认识">http://xiangxik.github.io/2016/05/08/nosql_start/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://xiangxik.github.io/2016/05/08/nosql_start/　　作者: 孔祥溪" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -364,8 +345,8 @@
         
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2016/03/19/javaplatform4/">
-                    java平台 4.混合式配置
+                <a href="/2016/05/08/infinispan/">
+                    Infinispan缓存
                 </a>
             </div>
         
@@ -376,7 +357,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#intro"><span class="toc-number">1.</span> <span class="toc-text">开始</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#u7B80_u4ECB"><span class="toc-number"></span> <span class="toc-text">简介</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#u8FD0_u884C_u73AF_u5883"><span class="toc-number">1.</span> <span class="toc-text">运行环境</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u6A21_u5F0F"><span class="toc-number">2.</span> <span class="toc-text">模式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u4EA4_u4E92"><span class="toc-number">3.</span> <span class="toc-text">交互</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#u4E0B_u8F7D_u548C_u5B89_u88C5Infinispan"><span class="toc-number"></span> <span class="toc-text">下载和安装Infinispan</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#u4E0B_u8F7DInfinispan"><span class="toc-number">1.</span> <span class="toc-text">下载Infinispan</span></a></li></ol>
+    
 </div>
 <style>
     .left-col .switch-btn {
@@ -433,7 +414,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"Infinispan缓存　| 孔祥溪的博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"NoSQL的认识　| 孔祥溪的博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -449,7 +430,7 @@
     
       <div class="duoshuo" id="comments">
     <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="2016/05/08/infinispan_start/" data-title="Infinispan缓存" data-url="http://xiangxik.github.io/2016/05/08/infinispan_start/"></div>
+    <div class="ds-thread" data-thread-key="2016/05/08/nosql_start/" data-title="NoSQL的认识" data-url="http://xiangxik.github.io/2016/05/08/nosql_start/"></div>
     <!-- 多说评论框 end -->
     <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
     <script type="text/javascript">
@@ -479,13 +460,13 @@
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2016/03/19/javaplatform4/" title="下一篇: java平台 4.混合式配置">
+            <a href="/2016/05/08/infinispan/" title="下一篇: Infinispan缓存">
                 <i class="fa fa-angle-right"></i>
             </a>
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/05/08/infinispan_start/">Infinispan缓存</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/19/javaplatform4/">java平台 4.混合式配置</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/19/javaplatform3/">java平台 3.模块化的实现原理</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/19/javaplatform2/">java平台 2.开始使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/29/javaplatform1/">java平台 1.概述</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/28/centos6.5_base/">CentOS6.5基本配置</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/30/extjs6_by_example1/">《Ext JS 6 By Example》 章节1. 开始使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/01/start/">开篇</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/05/08/nosql_start/">NoSQL的认识</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/08/infinispan/">Infinispan缓存</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/01/apache_configuration/">Apache Configuration 详解</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/24/castle/">Castle开发平台手册</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/05/groovy_template/">Groovy Template 详解</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/29/spring_data/">Spring Data 详解</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/28/centos6.5_base/">CentOS6.5基本配置</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/10/javaplatform/">java开发平台</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/01/start/">开篇</a></li></ul>
 
 
 

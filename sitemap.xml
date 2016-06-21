@@ -2,79 +2,86 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://xiangxik.github.io/2016/03/19/javaplatform2/</loc>
+    <loc>http://xiangxik.github.io/2016/02/10/javaplatform/</loc>
     
-    <lastmod>2016-05-14T16:58:27.559Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://xiangxik.github.io/2016/05/08/infinispan_start/</loc>
-    
-    <lastmod>2016-05-09T15:20:30.282Z</lastmod>
+    <lastmod>2016-06-21T05:39:41.466Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://xiangxik.github.io/2016/02/29/javaplatform1/</loc>
+    <loc>http://xiangxik.github.io/2016/03/05/groovy_template/</loc>
     
-    <lastmod>2016-04-28T15:36:35.737Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://xiangxik.github.io/2016/03/19/javaplatform3/</loc>
-    
-    <lastmod>2016-03-19T14:59:23.100Z</lastmod>
+    <lastmod>2016-06-21T05:39:27.221Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://xiangxik.github.io/2016/03/19/javaplatform4/</loc>
+    <loc>http://xiangxik.github.io/2016/04/24/castle/</loc>
     
-    <lastmod>2016-03-19T14:24:06.242Z</lastmod>
+    <lastmod>2016-06-21T05:39:04.247Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://xiangxik.github.io/2016/05/01/apache_configuration/</loc>
+    
+    <lastmod>2016-06-21T05:38:41.145Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://xiangxik.github.io/2016/05/08/nosql_start/</loc>
+    
+    <lastmod>2016-06-21T05:37:13.929Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://xiangxik.github.io/2016/02/29/spring_data/</loc>
+    
+    <lastmod>2016-06-21T05:37:04.131Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://xiangxik.github.io/2016/01/01/start/</loc>
     
-    <lastmod>2016-03-19T12:53:49.947Z</lastmod>
+    <lastmod>2016-06-21T03:21:46.080Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://xiangxik.github.io/2016/01/30/extjs6_by_example1/</loc>
+    <loc>http://xiangxik.github.io/2016/05/08/infinispan/</loc>
     
-    <lastmod>2016-03-18T15:13:50.871Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://xiangxik.github.io/about/index.html</loc>
-    
-    <lastmod>2016-03-17T15:43:41.198Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://xiangxik.github.io/tags/index.html</loc>
-    
-    <lastmod>2016-03-17T15:34:03.009Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://xiangxik.github.io//404.html</loc>
-    
-    <lastmod>2016-03-17T15:32:39.135Z</lastmod>
+    <lastmod>2016-06-21T03:21:46.054Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://xiangxik.github.io/2016/02/28/centos6.5_base/</loc>
     
-    <lastmod>2016-02-29T09:27:56.215Z</lastmod>
+    <lastmod>2016-06-21T03:21:46.043Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://xiangxik.github.io/tags/index.html</loc>
+    
+    <lastmod>2016-06-21T01:25:43.936Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://xiangxik.github.io//404.html</loc>
+    
+    <lastmod>2016-06-21T01:25:43.911Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://xiangxik.github.io/about/index.html</loc>
+    
+    <lastmod>2016-06-21T01:25:43.905Z</lastmod>
     
   </url>
   
