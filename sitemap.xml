@@ -2,30 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://xiangxik.github.io/2016/02/10/javaplatform/</loc>
+    <loc>http://xiangxik.github.io/2016/04/24/castle/</loc>
     
-    <lastmod>2016-06-21T05:56:07.246Z</lastmod>
+    <lastmod>2016-07-18T01:21:29.132Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://xiangxik.github.io/2016/04/24/castle/</loc>
+    <loc>http://xiangxik.github.io/2016/02/29/spring_data/</loc>
     
-    <lastmod>2016-06-21T05:53:48.917Z</lastmod>
+    <lastmod>2016-06-26T02:30:08.358Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://xiangxik.github.io/2016/03/05/groovy_template/</loc>
     
-    <lastmod>2016-06-21T05:39:27.221Z</lastmod>
+    <lastmod>2016-06-26T02:29:58.099Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://xiangxik.github.io/2016/05/01/apache_configuration/</loc>
     
-    <lastmod>2016-06-21T05:38:41.145Z</lastmod>
+    <lastmod>2016-06-26T02:29:43.329Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://xiangxik.github.io/2016/02/10/javaplatform/</loc>
+    
+    <lastmod>2016-06-26T02:29:23.004Z</lastmod>
     
   </url>
   
@@ -33,13 +40,6 @@
     <loc>http://xiangxik.github.io/2016/05/08/nosql_start/</loc>
     
     <lastmod>2016-06-21T05:37:13.929Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://xiangxik.github.io/2016/02/29/spring_data/</loc>
-    
-    <lastmod>2016-06-21T05:37:04.131Z</lastmod>
     
   </url>
   

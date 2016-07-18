@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>孔祥溪的博客</title>
-  <subtitle>自信、勇敢地实现自己的目标！</subtitle>
+  <title>孔明灯</title>
+  <subtitle>没事瞎折腾</subtitle>
   <link href="//atom.xml" rel="self"/>
   
   <link href="http://xiangxik.github.io/"/>
@@ -9,7 +9,7 @@
   <id>http://xiangxik.github.io/</id>
   
   <author>
-    <name>孔祥溪</name>
+    <name>孔明灯</name>
     
   </author>
   
@@ -113,14 +113,14 @@
     <link href="http://xiangxik.github.io/2016/05/01/apache_configuration/"/>
     <id>http://xiangxik.github.io/2016/05/01/apache_configuration/</id>
     <published>2016-05-01T04:23:42.000Z</published>
-    <updated>2016-06-21T05:38:41.145Z</updated>
+    <updated>2016-06-26T02:29:43.329Z</updated>
     
-    <content type="html">&lt;p&gt;&lt;/p&gt;&lt;h2 id=&quot;intro&quot;&gt;前言&lt;/h2&gt;Apache Configuration 详解。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;p&gt;&lt;/p&gt;
+    <content type="html">&lt;p&gt;Apache Configuration 详解。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 </content>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;h2 id=&quot;intro&quot;&gt;前言&lt;/h2&gt;Apache Configuration 详解。&lt;br&gt;
+      &lt;p&gt;Apache Configuration 详解。&lt;br&gt;
     
     </summary>
     
@@ -136,19 +136,44 @@
     <link href="http://xiangxik.github.io/2016/04/24/castle/"/>
     <id>http://xiangxik.github.io/2016/04/24/castle/</id>
     <published>2016-04-24T04:35:39.000Z</published>
-    <updated>2016-06-21T05:53:48.917Z</updated>
+    <updated>2016-07-18T01:21:29.132Z</updated>
     
-    <content type="html">&lt;p&gt;&lt;/p&gt;&lt;h2 id=&quot;intro&quot;&gt;前言&lt;/h2&gt;Castle的目标是打造一个高性能、高扩展性的java开发平台，适合于开发各种互联网软件产品。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;p&gt;&lt;/p&gt;
-&lt;div class=&quot;github-widget&quot; data-repo=&quot;xiangxik/castle&quot;&gt;&lt;/div&gt;
+    <content type="html">&lt;p&gt;Castle的目标是打造一个高性能、高扩展性的java开发平台，完成通用的管理功能。采用了后台管理集中部署，会员业务系统可分离部署等特点，可独立区分后台管理系统、前端展示系统、用户中心系统。开发者可以在此基础上进行扩展，进而使用一个核心就可以开发出各种互联网产品。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&quot;github-widget&quot; data-repo=&quot;xiangxik/castle-platform&quot;&gt;&lt;/div&gt;
 
+&lt;h1 id=&quot;u7B80_u4ECB&quot;&gt;&lt;a href=&quot;#u7B80_u4ECB&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h1&gt;&lt;p&gt;本平台既适用于开发普通的管理系统，也适用于开发高性能、高扩展性的互联网产品。&lt;/p&gt;
 &lt;h2 id=&quot;u7279_u70B9&quot;&gt;&lt;a href=&quot;#u7279_u70B9&quot; class=&quot;headerlink&quot; title=&quot;特点&quot;&gt;&lt;/a&gt;特点&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;可以采用单一服务集成，也可选择地使用第三方服务管理框架（例如dubbo）。&lt;/li&gt;
+&lt;li&gt;基于目前最新最热门的java技术&lt;/li&gt;
+&lt;li&gt;采用Java8的语法&lt;/li&gt;
+&lt;li&gt;采用servlet3.1规范的集成机制&lt;/li&gt;
+&lt;li&gt;模块可扩展。直接添加或移除对应模块的jar即可。&lt;/li&gt;
+&lt;li&gt;采用spring javaconfig。 达到零spring配置文件。&lt;/li&gt;
+&lt;li&gt;采用querydsl通用查询&lt;/li&gt;
+&lt;li&gt;包含通用的后台管理&lt;/li&gt;
+&lt;li&gt;可以采用单一服务集成，也可选择地使用第三方服务管理框架（支持dubbo或thrift）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;u4E3B_u8981_u7528_u5230_u7684_u7B2C_u4E09_u65B9_u529F_u80FD&quot;&gt;&lt;a href=&quot;#u4E3B_u8981_u7528_u5230_u7684_u7B2C_u4E09_u65B9_u529F_u80FD&quot; class=&quot;headerlink&quot; title=&quot;主要用到的第三方功能&quot;&gt;&lt;/a&gt;主要用到的第三方功能&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;spring-mvc（MVC框架）&lt;/li&gt;
+&lt;li&gt;spring-security（安全框架）&lt;/li&gt;
+&lt;li&gt;spring-data（通用数据处理）&lt;/li&gt;
+&lt;li&gt;querydsl（通用查询框架）&lt;/li&gt;
+&lt;li&gt;jackson（json处理框架）&lt;/li&gt;
+&lt;li&gt;infinispan（分布式缓存）&lt;/li&gt;
+&lt;li&gt;jpa（关系数据库）&lt;/li&gt;
+&lt;li&gt;redis（键值数据库）&lt;/li&gt;
+&lt;li&gt;mongodb（文档数据库）&lt;/li&gt;
+&lt;li&gt;neo4j（图形数据库）&lt;/li&gt;
+&lt;li&gt;groovy-template（碎片化模板）&lt;/li&gt;
+&lt;li&gt;thymeleaf（前端模板）&lt;/li&gt;
+&lt;li&gt;extjs6（js组件框架）&lt;/li&gt;
+&lt;li&gt;dubbo（分布式服务框架）&lt;/li&gt;
+&lt;li&gt;thrift（异构系统服务调用框架）&lt;/li&gt;
 &lt;/ul&gt;
 </content>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;h2 id=&quot;intro&quot;&gt;前言&lt;/h2&gt;Castle的目标是打造一个高性能、高扩展性的java开发平台，适合于开发各种互联网软件产品。&lt;br&gt;
+      &lt;p&gt;Castle的目标是打造一个高性能、高扩展性的java开发平台，完成通用的管理功能。采用了后台管理集中部署，会员业务系统可分离部署等特点，可独立区分后台管理系统、前端展示系统、用户中心系统。开发者可以在此基础上进行扩展，进而使用一个核心就可以开发出各种互联网产品。&lt;br&gt;
     
     </summary>
     
@@ -164,14 +189,14 @@
     <link href="http://xiangxik.github.io/2016/03/05/groovy_template/"/>
     <id>http://xiangxik.github.io/2016/03/05/groovy_template/</id>
     <published>2016-03-05T02:25:29.000Z</published>
-    <updated>2016-06-21T05:39:27.221Z</updated>
+    <updated>2016-06-26T02:29:58.099Z</updated>
     
-    <content type="html">&lt;p&gt;&lt;/p&gt;&lt;h2 id=&quot;intro&quot;&gt;前言&lt;/h2&gt;Groovy Template 详解。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;p&gt;&lt;/p&gt;
+    <content type="html">&lt;p&gt;Groovy Template 详解。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 </content>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;h2 id=&quot;intro&quot;&gt;前言&lt;/h2&gt;Groovy Template 详解。&lt;br&gt;
+      &lt;p&gt;Groovy Template 详解。&lt;br&gt;
     
     </summary>
     
@@ -187,14 +212,14 @@
     <link href="http://xiangxik.github.io/2016/02/29/spring_data/"/>
     <id>http://xiangxik.github.io/2016/02/29/spring_data/</id>
     <published>2016-02-29T09:25:49.000Z</published>
-    <updated>2016-06-21T05:37:04.131Z</updated>
+    <updated>2016-06-26T02:30:08.358Z</updated>
     
-    <content type="html">&lt;p&gt;&lt;/p&gt;&lt;h2 id=&quot;intro&quot;&gt;前言&lt;/h2&gt;Spring Data 详解。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;p&gt;&lt;/p&gt;
+    <content type="html">&lt;p&gt;Spring Data 详解。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 </content>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;h2 id=&quot;intro&quot;&gt;前言&lt;/h2&gt;Spring Data 详解。&lt;br&gt;
+      &lt;p&gt;Spring Data 详解。&lt;br&gt;
     
     </summary>
     
@@ -244,7 +269,7 @@
     <link href="http://xiangxik.github.io/2016/02/10/javaplatform/"/>
     <id>http://xiangxik.github.io/2016/02/10/javaplatform/</id>
     <published>2016-02-10T09:25:49.000Z</published>
-    <updated>2016-06-21T05:56:07.246Z</updated>
+    <updated>2016-06-26T02:29:23.004Z</updated>
     
     <content type="html">&lt;p&gt;基于servlet3.1的模块化规范，采用spring, spring mvc, jpa, spring data, querydsl, shiro, fastjson, beetl等开源技术，搭建了一套可模块化扩展的java框架，并可选择地使用extjs6、easyui、bootstrap实现了后台管理的公共功能。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;div class=&quot;github-widget&quot; data-repo=&quot;xiangxik/java-platform&quot;&gt;&lt;/div&gt;
@@ -314,7 +339,7 @@
 &lt;li&gt;使用初始登陆密码&lt;br&gt;用户名：admin&lt;br&gt;密码：asd123&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&quot;u603B_u7ED3&quot;&gt;&lt;a href=&quot;#u603B_u7ED3&quot; class=&quot;headerlink&quot; title=&quot;总结&quot;&gt;&lt;/a&gt;总结&lt;/h2&gt;&lt;p&gt;整个项目仅仅需要一个初始化器来读取配置文件，即可运行，且拥有了一个完整的后台管理功能。&lt;br&gt;如要增加功能，只需在pom.xml添加依赖即可。&lt;/p&gt;
-&lt;p&gt;#模块化原理&lt;br&gt;各种各样的项目，一些基础总是相同的，如何把基础搭建和巩固起来，使用模块化设计是不错的选择。目前，模块化的产品最规范的是osgi了，不过osgi太过于复杂，而且到现在，各厂商的实现也不能完全的兼容规范。osgi还有个特点是热部署，其实大多数项目，尤其是企业项目，暂停一下服务也不会造成很大的损失。能做到热部署固然是好的，但其增加了项目开发的复杂度，在需求不大的情况下，反而得不偿失。因此，静态模块化的java-platform由此诞生。&lt;/p&gt;
+&lt;h1 id=&quot;u6A21_u5757_u5316_u539F_u7406&quot;&gt;&lt;a href=&quot;#u6A21_u5757_u5316_u539F_u7406&quot; class=&quot;headerlink&quot; title=&quot;模块化原理&quot;&gt;&lt;/a&gt;模块化原理&lt;/h1&gt;&lt;p&gt;各种各样的项目，一些基础总是相同的，如何把基础搭建和巩固起来，使用模块化设计是不错的选择。目前，模块化的产品最规范的是osgi了，不过osgi太过于复杂，而且到现在，各厂商的实现也不能完全的兼容规范。osgi还有个特点是热部署，其实大多数项目，尤其是企业项目，暂停一下服务也不会造成很大的损失。能做到热部署固然是好的，但其增加了项目开发的复杂度，在需求不大的情况下，反而得不偿失。因此，静态模块化的java-platform由此诞生。&lt;/p&gt;
 &lt;h2 id=&quot;java_spi&quot;&gt;&lt;a href=&quot;#java_spi&quot; class=&quot;headerlink&quot; title=&quot;java spi&quot;&gt;&lt;/a&gt;java spi&lt;/h2&gt;&lt;p&gt;首先，我们需要了解一下java spi。java spi是java6开始，提供的一个jar包之间读取实现类的标准。&lt;br&gt;主要涉及的类是java.util.ServiceLoader。&lt;br&gt;只要我们在类路径下的META-INF/services/，创建与接口全名称一样的文件，文件的内容，每一行代表它的一个实现类。&lt;br&gt;当使用ServiceLoader.load(接口)的时候，java将自动找到所有jar包下面的META-INF/services/接口 文件，加载其描述的实现类。&lt;br&gt;这样的好处很明显，当一个jar包含有接口的实现类，它的加入，便可以带来的新功能，它的移除，功能也随之移除。功能的添加及移除，不影响任何代码的编写。&lt;/p&gt;
 &lt;h2 id=&quot;servlet3-1&quot;&gt;&lt;a href=&quot;#servlet3-1&quot; class=&quot;headerlink&quot; title=&quot;servlet3.1&quot;&gt;&lt;/a&gt;servlet3.1&lt;/h2&gt;&lt;p&gt;servlet3.0开始，加入了一个不需要web.xml配置的特性，该特性的实现就是通过spi。&lt;br&gt;在web项目中，只要在META-INF/services/创建文件javax.servlet.ServletContainerInitializer，在项目中实现该接口，并把其添加到文件中，则容器启动时，会加载这些实现类。&lt;br&gt;我们可以在实现类中增加filter，增加servlet，增加listener，基本上web.xml的功能都能在此体现，而且代码编写比xml强多了。&lt;/p&gt;
 &lt;h2 id=&quot;spring_web_u7684_u652F_u6301&quot;&gt;&lt;a href=&quot;#spring_web_u7684_u652F_u6301&quot; class=&quot;headerlink&quot; title=&quot;spring web的支持&quot;&gt;&lt;/a&gt;spring web的支持&lt;/h2&gt;&lt;p&gt;spring web根据servlet3.0提供的特性，增加了一个对ServletContainerInitializer的实现。我们从源码中也可以看到：&lt;br&gt;&lt;img src=&quot;/img/javaplatform/3-1.jpg&quot; alt=&quot;Alt spring&quot;&gt;&lt;br&gt;实现类为org.springframework.web.SpringServletContainerInitializer&lt;br&gt;查看源码得知，会交给org.springframework.web.WebApplicationInitializer来处理&lt;/p&gt;
