@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>孔明灯</title>
-  <subtitle>没事瞎折腾</subtitle>
+  <subtitle>照亮前方，照亮自己。</subtitle>
   <link href="//atom.xml" rel="self"/>
   
   <link href="http://xiangxik.github.io/"/>
-  <updated>2016-06-21T05:37:13.929Z</updated>
+  <updated>2016-07-18T11:59:59.943Z</updated>
   <id>http://xiangxik.github.io/</id>
   
   <author>
@@ -14,6 +14,62 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Canon In D</title>
+    <link href="http://xiangxik.github.io/2016/07/18/gt_canon_in_d/"/>
+    <id>http://xiangxik.github.io/2016/07/18/gt_canon_in_d/</id>
+    <published>2016-07-18T11:59:49.000Z</published>
+    <updated>2016-07-18T11:59:59.943Z</updated>
+    
+    <content type="html">&lt;p&gt;D调卡农&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/img/guitar/canon_id_d/1.jpg&quot; alt=&quot;Alt 1.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/img/guitar/canon_id_d/2.jpg&quot; alt=&quot;Alt 2.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/img/guitar/canon_id_d/3.jpg&quot; alt=&quot;Alt 3.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/img/guitar/canon_id_d/4.jpg&quot; alt=&quot;Alt 4.png&quot;&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;D调卡农&lt;br&gt;
+    
+    </summary>
+    
+      <category term="音乐" scheme="http://xiangxik.github.io/categories/%E9%9F%B3%E4%B9%90/"/>
+    
+    
+      <category term="吉他谱" scheme="http://xiangxik.github.io/tags/%E5%90%89%E4%BB%96%E8%B0%B1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>My Heart Will Go On</title>
+    <link href="http://xiangxik.github.io/2016/07/18/gt_my_heart_will_go_on/"/>
+    <id>http://xiangxik.github.io/2016/07/18/gt_my_heart_will_go_on/</id>
+    <published>2016-07-18T09:28:49.000Z</published>
+    <updated>2016-07-18T09:31:01.718Z</updated>
+    
+    <content type="html">&lt;p&gt;My Heart Will Go On&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/img/guitar/my_heart_will_go_on/1.png&quot; alt=&quot;Alt 1.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/img/guitar/my_heart_will_go_on/2.png&quot; alt=&quot;Alt 2.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/img/guitar/my_heart_will_go_on/3.png&quot; alt=&quot;Alt 3.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/img/guitar/my_heart_will_go_on/4.png&quot; alt=&quot;Alt 4.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/img/guitar/my_heart_will_go_on/5.png&quot; alt=&quot;Alt 5.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/img/guitar/my_heart_will_go_on/6.png&quot; alt=&quot;Alt 6.png&quot;&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;My Heart Will Go On&lt;br&gt;
+    
+    </summary>
+    
+      <category term="音乐" scheme="http://xiangxik.github.io/categories/%E9%9F%B3%E4%B9%90/"/>
+    
+    
+      <category term="吉他谱" scheme="http://xiangxik.github.io/tags/%E5%90%89%E4%BB%96%E8%B0%B1/"/>
+    
+  </entry>
   
   <entry>
     <title>NoSQL的认识</title>
