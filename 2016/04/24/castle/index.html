@@ -11,10 +11,18 @@
 <meta property="og:url" content="http://xiangxik.github.io/2016/04/24/castle/index.html">
 <meta property="og:site_name" content="孔明灯">
 <meta property="og:description" content="Castle的目标是打造一个高性能、高扩展性的java开发平台，完成通用的管理功能。采用了后台管理集中部署，会员业务系统可分离部署等特点，可独立区分后台管理系统、前端展示系统、用户中心系统。开发者可以在此基础上进行扩展，进而使用一个核心就可以开发出各种互联网产品。">
-<meta property="og:updated_time" content="2016-07-18T01:21:29.132Z">
+<meta property="og:image" content="http://xiangxik.github.io/img/castle/import_to_eclipse.png">
+<meta property="og:image" content="http://xiangxik.github.io/img/castle/new_project.png">
+<meta property="og:image" content="http://xiangxik.github.io/img/castle/new_maven_project.png">
+<meta property="og:image" content="http://xiangxik.github.io/img/castle/new_maven_project_step1.png">
+<meta property="og:image" content="http://xiangxik.github.io/img/castle/new_maven_project_step2.png">
+<meta property="og:image" content="http://xiangxik.github.io/img/castle/example_pom.png">
+<meta property="og:image" content="http://xiangxik.github.io/img/castle/example_no_src.png">
+<meta property="og:updated_time" content="2016-09-27T15:51:53.704Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Castle开发平台手册">
 <meta name="twitter:description" content="Castle的目标是打造一个高性能、高扩展性的java开发平台，完成通用的管理功能。采用了后台管理集中部署，会员业务系统可分离部署等特点，可独立区分后台管理系统、前端展示系统、用户中心系统。开发者可以在此基础上进行扩展，进而使用一个核心就可以开发出各种互联网产品。">
+<meta name="twitter:image" content="http://xiangxik.github.io/img/castle/import_to_eclipse.png">
   
     <link rel="alternative" href="/atom.xml" title="孔明灯" type="application/atom+xml">
   
@@ -29,7 +37,7 @@
       <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
       <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
   
-  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
   
   <link href="//cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -302,18 +310,21 @@
         <p>Castle的目标是打造一个高性能、高扩展性的java开发平台，完成通用的管理功能。采用了后台管理集中部署，会员业务系统可分离部署等特点，可独立区分后台管理系统、前端展示系统、用户中心系统。开发者可以在此基础上进行扩展，进而使用一个核心就可以开发出各种互联网产品。<br><a id="more"></a></p>
 <div class="github-widget" data-repo="xiangxik/castle-platform"></div>
 
-<h1 id="u7B80_u4ECB"><a href="#u7B80_u4ECB" class="headerlink" title="简介"></a>简介</h1><p>本平台既适用于开发普通的管理系统，也适用于开发高性能、高扩展性的互联网产品。</p>
-<h2 id="u7279_u70B9"><a href="#u7279_u70B9" class="headerlink" title="特点"></a>特点</h2><ul>
+<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>本平台既适用于开发普通的管理系统，也适用于开发高性能、高扩展性的互联网产品。经过三次大重构，上一版本是<a href="https://github.com/xiangxik/java-platform" target="_blank" rel="external">https://github.com/xiangxik/java-platform</a>.</p>
+<h2 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h2><ul>
 <li>基于目前最新最热门的java技术</li>
 <li>采用Java8的语法</li>
 <li>采用servlet3.1规范的集成机制</li>
 <li>模块可扩展。直接添加或移除对应模块的jar即可。</li>
 <li>采用spring javaconfig。 达到零spring配置文件。</li>
+<li>支持多种数据操作混用</li>
 <li>采用querydsl通用查询</li>
 <li>包含通用的后台管理</li>
 <li>可以采用单一服务集成，也可选择地使用第三方服务管理框架（支持dubbo或thrift）。</li>
+<li>支持javaconfig和kryo序列化的dubbo</li>
+<li>支持国际化</li>
 </ul>
-<h2 id="u4E3B_u8981_u7528_u5230_u7684_u7B2C_u4E09_u65B9_u529F_u80FD"><a href="#u4E3B_u8981_u7528_u5230_u7684_u7B2C_u4E09_u65B9_u529F_u80FD" class="headerlink" title="主要用到的第三方功能"></a>主要用到的第三方功能</h2><ul>
+<h2 id="主要用到的第三方功能"><a href="#主要用到的第三方功能" class="headerlink" title="主要用到的第三方功能"></a>主要用到的第三方功能</h2><ul>
 <li>spring-mvc（MVC框架）</li>
 <li>spring-security（安全框架）</li>
 <li>spring-data（通用数据处理）</li>
@@ -330,7 +341,17 @@
 <li>dubbo（分布式服务框架）</li>
 <li>thrift（异构系统服务调用框架）</li>
 </ul>
-
+<h1 id="开始使用"><a href="#开始使用" class="headerlink" title="开始使用"></a>开始使用</h1><p>利用castle-platform的部分jar包的组合，可以构建前端web系统和后端管理web系统，前端可以采用dubbo/thrift/webservice调用后端服务。</p>
+<h2 id="开始构建"><a href="#开始构建" class="headerlink" title="开始构建"></a>开始构建</h2><ul>
+<li><p>把castle-platform引入进eclipse.<br><img src="/img/castle/import_to_eclipse.png" alt="Alt castle-platform"></p>
+</li>
+<li><p>建立工程主目录<br>新建工程：<br><img src="/img/castle/new_project.png" alt="Alt new_project"></p>
+</li>
+</ul>
+<p>选择maven工程：<br><img src="/img/castle/new_maven_project.png" alt="Alt new_maven_project"><br><img src="/img/castle/new_maven_project_step1.png" alt="Alt new_maven_project"><br><img src="/img/castle/new_maven_project_step2.png" alt="Alt new_maven_project"></p>
+<p>完成后如下：<br><img src="/img/castle/example_pom.png" alt="Alt example_pom"></p>
+<p>可以把src目录删掉，如下：<br><img src="/img/castle/example_no_src.png" alt="Alt example_no_src"></p>
+<h2 id="构建后端管理系统"><a href="#构建后端管理系统" class="headerlink" title="构建后端管理系统"></a>构建后端管理系统</h2>
       
     </div>
     
@@ -341,7 +362,7 @@
         <p><span>本文标题:</span><a href="/2016/04/24/castle/">Castle开发平台手册</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">孔明灯</a></p>
         <p><span>发布时间:</span>2016-04-24, 12:35:39</p>
-        <p><span>最后更新:</span>2016-07-18, 09:21:29</p>
+        <p><span>最后更新:</span>2016-09-27, 23:51:53</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2016/04/24/castle/" title="Castle开发平台手册">http://xiangxik.github.io/2016/04/24/castle/</a>
             <span class="copy-path" data-clipboard-text="原文: http://xiangxik.github.io/2016/04/24/castle/　　作者: 孔明灯" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -376,7 +397,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#u7B80_u4ECB"><span class="toc-number">1.</span> <span class="toc-text">简介</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#u7279_u70B9"><span class="toc-number">1.1.</span> <span class="toc-text">特点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u4E3B_u8981_u7528_u5230_u7684_u7B2C_u4E09_u65B9_u529F_u80FD"><span class="toc-number">1.2.</span> <span class="toc-text">主要用到的第三方功能</span></a></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#简介"><span class="toc-number">1.</span> <span class="toc-text">简介</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#特点"><span class="toc-number">1.1.</span> <span class="toc-text">特点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#主要用到的第三方功能"><span class="toc-number">1.2.</span> <span class="toc-text">主要用到的第三方功能</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#开始使用"><span class="toc-number">2.</span> <span class="toc-text">开始使用</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#开始构建"><span class="toc-number">2.1.</span> <span class="toc-text">开始构建</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#构建后端管理系统"><span class="toc-number">2.2.</span> <span class="toc-text">构建后端管理系统</span></a></li></ol></li></ol>
 </div>
 <style>
     .left-col .switch-btn {
@@ -487,7 +508,7 @@
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/07/26/zookeeper/">ZooKeeper使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/26/iptables/">iptables使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/26/postgresql/">Postgresql使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/26/redis/">Redis使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/18/gt_canon_in_d/">Canon In D</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/18/gt_my_heart_will_go_on/">My Heart Will Go On</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/08/nosql_start/">NoSQL的认识</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/08/infinispan/">Infinispan缓存</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/01/apache_configuration/">Apache Configuration 详解</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/24/castle/">Castle开发平台手册</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/05/groovy_template/">Groovy Template 详解</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/29/spring_data/">Spring Data 详解</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/28/centos6.5_base/">CentOS6.5基本配置</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/10/javaplatform/">java开发平台</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/01/start/">开篇</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/08/29/socket_flow/">流式WebSocket</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/26/zookeeper/">ZooKeeper使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/26/iptables/">iptables使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/26/postgresql/">Postgresql使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/26/redis/">Redis使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/18/gt_canon_in_d/">Canon In D</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/18/gt_my_heart_will_go_on/">My Heart Will Go On</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/08/nosql_start/">NoSQL的认识</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/08/infinispan/">Infinispan缓存</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/01/apache_configuration/">Apache Configuration 详解</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/24/castle/">Castle开发平台手册</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/05/groovy_template/">Groovy Template 详解</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/29/spring_data/">Spring Data 详解</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/28/centos6.5_base/">CentOS6.5基本配置</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/10/javaplatform/">java开发平台</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/01/start/">开篇</a></li></ul>
 
 
 
@@ -532,7 +553,7 @@
 </footer>
     </div>
     
-    <script src="/js/GithubRepoWidget.js" type="text/javascript"></script>
+    <script src="/js/GithubRepoWidget.js"></script>
 
 <script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.1.22/require.min.js"></script>
 
