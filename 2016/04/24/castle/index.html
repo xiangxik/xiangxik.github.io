@@ -12,7 +12,7 @@
 <meta property="og:site_name" content="孔明灯">
 <meta property="og:description" content="Castle Platform的目标是打造一个高性能、高扩展性的java开发平台，完成通用的管理功能。采用了后台管理集中部署，会员业务系统可分离部署等特点，可独立区分后台管理系统、前端展示系统、用户中心系统。开发者可以在此基础上进行扩展，进而使用一个核心就可以开发出各种互联网产品。">
 <meta property="og:image" content="http://xiangxik.github.io/img/castle/frame.jpg">
-<meta property="og:updated_time" content="2016-10-04T08:54:32.118Z">
+<meta property="og:updated_time" content="2016-10-04T08:57:34.307Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Castle开发平台手册">
 <meta name="twitter:description" content="Castle Platform的目标是打造一个高性能、高扩展性的java开发平台，完成通用的管理功能。采用了后台管理集中部署，会员业务系统可分离部署等特点，可独立区分后台管理系统、前端展示系统、用户中心系统。开发者可以在此基础上进行扩展，进而使用一个核心就可以开发出各种互联网产品。">
@@ -318,7 +318,7 @@
 <li>支持javaconfig和kryo序列化的dubbo</li>
 <li>支持国际化</li>
 </ul>
-<p>##原理说明<br>采用Dubbo等第三方RMI框架，把业务处理放置于多个Provider， Web服务作为Consumer，对Provider进行调用，从而达到分布式部署。<br><br><img src="/img/castle/frame.jpg" alt="Alt framework"></p>
+<h2 id="原理说明"><a href="#原理说明" class="headerlink" title="原理说明"></a>原理说明</h2><p>采用Dubbo等第三方RMI框架，把业务处理放置于多个Provider， Web服务作为Consumer，对Provider进行调用，从而达到分布式部署。<br><br><img src="/img/castle/frame.jpg" alt="Alt framework"></p>
 <h2 id="主要用到的第三方功能"><a href="#主要用到的第三方功能" class="headerlink" title="主要用到的第三方功能"></a>主要用到的第三方功能</h2><ul>
 <li>spring-mvc（MVC框架）</li>
 <li>spring-security（安全框架）</li>
@@ -353,7 +353,7 @@
         <p><span>本文标题:</span><a href="/2016/04/24/castle/">Castle开发平台手册</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">孔明灯</a></p>
         <p><span>发布时间:</span>2016-04-24, 12:35:39</p>
-        <p><span>最后更新:</span>2016-10-04, 16:54:32</p>
+        <p><span>最后更新:</span>2016-10-04, 16:57:34</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2016/04/24/castle/" title="Castle开发平台手册">http://xiangxik.github.io/2016/04/24/castle/</a>
             <span class="copy-path" data-clipboard-text="原文: http://xiangxik.github.io/2016/04/24/castle/　　作者: 孔明灯" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -388,7 +388,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#简介"><span class="toc-number">1.</span> <span class="toc-text">简介</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#特点"><span class="toc-number">1.1.</span> <span class="toc-text">特点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#主要用到的第三方功能"><span class="toc-number">1.2.</span> <span class="toc-text">主要用到的第三方功能</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#开始使用"><span class="toc-number">2.</span> <span class="toc-text">开始使用</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#把例子启动起来"><span class="toc-number">2.1.</span> <span class="toc-text">把例子启动起来</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#配置zookeeper"><span class="toc-number">2.1.1.</span> <span class="toc-text">配置zookeeper</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#把castle-example引入到eclipse"><span class="toc-number">2.1.2.</span> <span class="toc-text">把castle-example引入到eclipse</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#启动Provider"><span class="toc-number">2.1.3.</span> <span class="toc-text">启动Provider</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#启动website"><span class="toc-number">2.1.4.</span> <span class="toc-text">启动website</span></a></li></ol></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#简介"><span class="toc-number">1.</span> <span class="toc-text">简介</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#特点"><span class="toc-number">1.1.</span> <span class="toc-text">特点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#原理说明"><span class="toc-number">1.2.</span> <span class="toc-text">原理说明</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#主要用到的第三方功能"><span class="toc-number">1.3.</span> <span class="toc-text">主要用到的第三方功能</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#开始使用"><span class="toc-number">2.</span> <span class="toc-text">开始使用</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#把例子启动起来"><span class="toc-number">2.1.</span> <span class="toc-text">把例子启动起来</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#配置zookeeper"><span class="toc-number">2.1.1.</span> <span class="toc-text">配置zookeeper</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#把castle-example引入到eclipse"><span class="toc-number">2.1.2.</span> <span class="toc-text">把castle-example引入到eclipse</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#启动Provider"><span class="toc-number">2.1.3.</span> <span class="toc-text">启动Provider</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#启动website"><span class="toc-number">2.1.4.</span> <span class="toc-text">启动website</span></a></li></ol></li></ol></li></ol>
 </div>
 <style>
     .left-col .switch-btn {
