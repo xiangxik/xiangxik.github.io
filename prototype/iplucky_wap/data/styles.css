@@ -73,6 +73,8 @@
 }
 .line {
 }
+.arrow {
+}
 .text_field {
   color:#000000;
   text-align:left;
@@ -90,6 +92,9 @@
 .flow_shape {
 }
 .menu_item {
+}
+.sticky_1 {
+  text-align:left;
 }
 .marker {
   color:#FFFFFF;
