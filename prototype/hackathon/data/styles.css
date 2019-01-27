@@ -11,11 +11,16 @@
 }
 .box_2 {
 }
+.box_3 {
+}
 .ellipse {
 }
 .image {
 }
 .placeholder {
+}
+.primary_button {
+  color:#FFFFFF;
 }
 .heading_1 {
   font-family:'ArialMT', 'Arial';
@@ -68,6 +73,10 @@
 .flow_shape {
 }
 .line {
+}
+.text_field {
+  color:#000000;
+  text-align:left;
 }
 .table_cell {
 }
