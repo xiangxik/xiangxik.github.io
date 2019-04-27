@@ -1,0 +1,132 @@
+html {
+  font-size: 100px;
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  position: relative;
+  background: url(https://sugar.bce.baidu.com/static/img-templet/background-88VwuczRK2Rx8iRx.jpg) 0% 0% / 100% 100% rgb(3, 12, 59);
+}
+
+#mapCharts {
+  position: absolute;
+  width: 14rem;
+  height: 13rem;
+  margin-top: -6.5rem;
+  margin-left: -7rem;
+  top: 50%;
+  left: 50%;
+}
+
+.areaToggle {
+  position: absolute;
+  width: 4rem;
+  height: 2.5rem;
+  right: 1.1rem;
+  bottom: 2.46rem;
+  color: #fff;
+  font-size: .2rem;
+}
+
+.areaToggle::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  background-image: url('../images/quyubg.png');
+  background-size: 100% 100%;
+  z-index: -1;
+}
+
+.layui-form-checkbox[lay-skin=primary] i {
+  background-color: transparent;
+  color: transparent;
+}
+
+.layui-form-checkbox[lay-skin=primary]:hover i {
+  border-color: #007fff;
+  color: transparent;
+}
+
+.layui-form-checked[lay-skin=primary] i {
+  border-color: #fff;
+  background-color: transparent;
+  color: #fff;
+}
+
+.layui-form-checked[lay-skin=primary]:hover i {
+  border-color: #007fff;
+  color: #fff;
+}
+
+.layui-form-label {
+  font-size: .2rem;
+  width: 2rem;
+  text-align: left;
+  padding-left: 0.4rem;
+}
+
+.layui-input-block {
+  margin-left: 3.2rem;
+}
+
+.layui-form-item {
+  margin-bottom: .2rem;
+}
+
+.layui-form {
+  margin-top: .28rem;
+}
+
+.legend {
+  color: #fff;
+  font-size: .14rem;
+  line-height: .26rem;
+  position: absolute;
+  right: 3.6rem;
+  bottom: 1.06rem;
+}
+
+.legend-item {
+  margin-bottom: .18rem;
+}
+
+.legend-item img {
+  width: .17rem;
+  height: .26rem;
+  margin-right: .18rem;
+}
+
+#mapPage {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #212121;
+}
+
+.info {
+  background: #363F49;
+  color: #A0A7B4;
+  padding: 10px;
+  /* max-width: 300px;
+  min-width: 200px; */
+  font-size: 12px;
+}
+
+
+.info tr .content {
+  text-align: right;
+  color: #D3D8E0;
+  max-width: 200px;
+  min-width: 120px;
+}

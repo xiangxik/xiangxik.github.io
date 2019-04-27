@@ -1,0 +1,96 @@
+<!-- 通用代码拷贝模版 -->
+
+<!-- 导航栏 -->
+<div class="nav" id='nav'>
+  <a href="./index.html">运行监控</a>
+  <a>经营监控</a>
+  <a>预警监控</a>
+  <svg class="icon navLockIcon" aria-hidden="true" id="lockBtn">
+    <use xlink:href="#icon-lock-line"></use>
+  </svg>
+</div>
+
+<!-- 侧边栏 -->
+
+<div class="siderWrap" id="siderWrap" data-visible='false'>
+  <div class="siderBtn" id="siderBtn">
+    <svg class="icon siderBtnIcon" aria-hidden="true">
+      <use xlink:href="#icon-zuojiantou"></use>
+    </svg>
+  </div>
+  <div class="sider" id="sider">
+    <div class="clearfix">
+      <div class="siderHeader">监控管理气站</div>
+      <div class="siderGeoBtn" id="siderGeoBtn">坐标图</div>
+    </div>
+    <div class="searchBox">
+      <svg class="baiyanIcon menuIcon" aria-hidden="true">
+        <use xlink:href="#icon-caidan"></use>
+      </svg>
+      <input class="searchInput" placeholder="输入关键字" />
+      <svg class="baiyanIcon searchIcon" aria-hidden="true">
+        <use xlink:href="#icon-xiazai17"></use>
+      </svg>
+    </div>
+
+    <h5 class="title2 mgt35">全国站点监控总量</h5>
+    <div class="dashLine"></div>
+
+    <div class="dataStatistics">
+      <div class="digit_set"></div>
+      <div class="digit_set"></div>
+      <div class="digit_set"></div>
+      <div class="digit_set set_last"></div>
+    </div>
+    <!-- 具体监控描述 -->
+    <div class="siteNumWrapper clearfix">
+      <div>华东：123</div>
+      <div>东北：123</div>
+      <div>西北：123</div>
+    </div>
+
+    <h5 class="title2 mgt17">全站今日累计报警（3）</h5>
+    <div class="dashLine"></div>
+    <div class="warningBox clearfix">
+      <div>
+        <span>运行报警</span>
+        <span>（3）</span>
+      </div>
+      <div>
+        <span>设备超期报警</span>
+        <span>（3）</span>
+      </div>
+      <div>
+        <span>维修超期报警</span>
+        <span>（3）</span>
+      </div>
+    </div>
+    <div class="mgt17">
+      <h5 class="title2">故障总量</h5>
+      <span class="oneyear">2018年</span>
+      <span class="twoyear">2019年</span>
+    </div>
+    <div class="dashLine"></div>
+
+    <!-- 柱状图1 -->
+    <div id="barCharts1"></div>
+
+    <h5 class="title2 mgt17">全年故障处理完成率</h5>
+    <div class="dashLine"></div>
+    <!-- 饼图1 -->
+    <div id="pieCharts1"></div>
+  </div>
+</div>
+
+<!-- LNG按钮 -->
+<div id="lngBtn" data-show="false">
+  <div id="lngBtnHidden">LNG</div>
+  <div id="lngBtnShow">
+    <svg class="icon shouqiIcon" aria-hidden="true">
+      <use xlink:href="#icon-zuojiantou"></use>
+    </svg>
+    <a class="btn private" href="./siteList.html">站点列表</a>
+    <a class="btn private">设备列表</a>
+    <a class="btn default">定制</a>
+  </div>
+</div>

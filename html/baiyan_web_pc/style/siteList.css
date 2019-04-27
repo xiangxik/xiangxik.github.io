@@ -1,0 +1,84 @@
+html {
+  font-size: 100px;
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  position: relative;
+  background: url(https://sugar.bce.baidu.com/static/img-templet/background-88VwuczRK2Rx8iRx.jpg) 0% 0% / 100% 100% rgb(3, 12, 59);
+}
+
+.siteList {
+  margin-top: 1rem;
+  font-size: 0;
+  margin-left: .175rem;
+  margin-right: .175rem;
+}
+
+.siteItemBox {
+  display: inline-block;
+  width: 20%;
+  padding: 0 .175rem;
+  box-sizing: border-box;
+  margin-bottom: .35rem;
+}
+
+.siteItem {
+  background: #fff;
+  padding: .07rem .07rem 0 .07rem;
+  font-size: .16rem;
+}
+
+.siteItem .imgWrap {
+  width: 100%;
+  height: 0;
+  padding-bottom: 64%;
+  position: relative;
+}
+
+.siteItem .imgWrap img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0; top: 0;
+}
+
+.siteItem .info {
+  line-height: .52rem;
+}
+
+.siteItem .name {
+  font-size: .21rem;
+  color: #0050ab;
+  float: left;
+}
+
+.siteItem .error {
+  margin-right: .1rem;
+}
+
+.siteItem .error, .siteItem .success {
+  float: right;
+}
+
+.siteItem .error > img {
+  width: .26rem;
+  height: .20rem;
+} 
+.siteItem .success > img {
+  width: .24rem;
+  height: .20rem;
+}
+.siteItem .error > span {
+  line-height: .2rem;
+  color: #ff3c00;
+}
+.siteItem .success > span {
+  line-height: .2rem;
+  color: #007819;
+}
+
