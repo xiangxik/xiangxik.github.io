@@ -344,3 +344,28 @@ body {
   margin-left: .1rem;
 }
 
+
+/* 小渊 */
+.flex {
+  display: flex;
+}
+.flexxc {
+  display: flex;
+  justify-content: center;
+}
+.flexyc {
+  display: flex;
+  align-items: center;
+}
+.flexxyc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.iblock {
+  display: inline-block;
+}
+.width {
+  width: 100%;
+  text-align: center;
+}

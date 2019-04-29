@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>运营管理</title>
+  <link rel="stylesheet" href="../layui/css/layui.css">
+  <link type="text/css" rel="styleSheet" href="../style/common.css">
+  </link>
+  <link type="text/css" rel="styleSheet" href="../style/management.css">
+  </link>
+  <script>
+    var whdef = 100 / 1920;// 表示1920的设计图,使用100PX的默认值
+    var wH = window.innerHeight;// 当前窗口的高度
+    var wW = window.innerWidth;// 当前窗口的宽度
+    var rem = wW * whdef;// 以默认比例值乘以当前窗口宽度,得到该宽度下的相应FONT-SIZE值
+    document.documentElement.style.fontSize = rem + "px";
+    // $('html').css('font-size', rem + "px");
+  </script>
+</head>
+
+<body>
+  <div class="nav" id='nav'>
+    <a href="./index.html">运行监控</a>
+    <a href="./management.html">经营监控</a>
+    <a href="./warnMonitor.html">预警监控</a>
+    <svg class="icon navLockIcon" aria-hidden="true" id="lockBtn">
+      <use xlink:href="#icon-lock-line"></use>
+    </svg>
+
+  </div>
+
+  <div id="wrapper">
+    <div id="mainContainer">
+      <!-- 左边 -->
+      <div class="mainLeft">
+        <div class="leftHeader">监控 LNG 加气站总量</div>
+        <div class="leftTop flex">
+          <div class="arc1 flexxyc">
+            <span class="counter">128</span>
+          </div>
+          <div class="arc2">
+            <div class="txtBox building">
+              <div class="txt">建设中</div>
+              <span class="counter">20</span>
+            </div>
+          </div>
+          <div class="arc3">
+            <div class="txtBox">
+              <div class="txt">已交付</div>
+              <span class="counter">108</span>
+            </div>
+            <div>
+            </div>
+          </div>
+        </div>
+        <div class="leftCenter">
+          <div class="leftHeader">全站销售收款方式分析</div>
+          <div id="pie"></div>
+        </div>
+        <div class="leftBottom">
+          <div class="leftHeader">12个月的销售量与平均单价</div>
+          <div class="tabTitle">
+            <span class="all active" data="all">全部监控站</span>
+            <span class="top10" data="top10">TOP10监控站</span>
+          </div>
+          <div id="barLine1"></div>
+        </div>
+      </div>
+      <!-- 中间 -->
+      <div class="mainCneter">
+        <div class="map">
+          <div id="mapCharts"></div>
+        </div>
+        <div class="centerBottom">
+          <div class="searchLimit">
+            <span class="tabBox">
+              <span data='1' class="active">今日/昨日销量</span>
+              <span data='2'>前7日销量</span>
+              <span data='3'>前1月销量</span>
+            </span>
+            <span>
+              <input type="text" placeholder="年-月-日" id="time1">
+              <input type="text" placeholder="年-月-日" id="time2">
+              <img src="../images/search.png" alt="" id="search">
+            </span>
+          </div>
+          <div class="searchData1 flex">
+            <div id="today" class="flex">
+              <div class="today">
+                <span class="iblock width">今日</span>
+                <span class="iblock width">销量</span>
+              </div>
+              <div class="sale">
+                <div class="txt">销量</div>
+                <div class="counter">108</div>
+              </div>
+              <div class="price">
+                <div class="txt">销量</div>
+                <div class="counter">108</div>
+              </div>
+            </div>
+            <div id="yesterday" class="flex">
+              <div class="today">
+                <span class="iblock width">昨日</span>
+                <span class="iblock width">销量</span>
+              </div>
+              <div class="sale">
+                <div class="txt">销量</div>
+                <div class="counter">108</div>
+              </div>
+              <div class="price">
+                <div class="txt">销量</div>
+                <div class="counter">108</div>
+              </div>
+            </div>
+          </div>
+          <div class="searchData2">
+            <div id="barLine2">
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 右边 -->
+      <div class="mainRight">
+        <div class="top">
+          <div class="title">今日销售</div>
+          <div class="time"></div>
+          <div class="tableTitle">
+            <span>气站名称</span>
+            <span>今日销售量</span>
+            <span>销售均价</span>
+          </div>
+        </div>
+        <div class="scrollbox">
+          <div id="scrollDiv">
+            <ul>
+              <li data='1'><span>大荔LNG加气站</span><span>235m</span><span>4248元/吨</span></li>
+              <li data='2'><span>大荔LNG加气站</span><span>235m</span><span>4248元/吨</span></li>
+              <li data='1'><span>大荔LNG加气站</span><span>235m</span><span>4248元/吨</span></li>
+              <li data='2'><span>大荔LNG加气站</span><span>235m</span><span>4248元/吨</span></li>
+              <li data='1'><span>大荔LNG加气站</span><span>235m</span><span>4248元/吨</span></li>
+              <li data='2'><span>大荔LNG加气站</span><span>235m</span><span>4248元/吨</span></li>
+              <li data='1'><span>大荔LNG加气站</span><span>235m</span><span>4248元/吨</span></li>
+              <li data='2'><span>大荔LNG加气站</span><span>235m</span><span>4248元/吨</span></li>
+              <li data='1'><span>大荔LNG加气站</span><span>235m</span><span>4248元/吨</span></li>
+              <li data='2'><span>大荔LNG加气站</span><span>235m</span><span>4248元/吨</span></li>
+              <li data='1'><span>大荔LNG加气站</span><span>235m</span><span>4248元/吨</span></li>
+              <li data='2'><span>大荔LNG加气站</span><span>235m</span><span>4248元/吨</span></li>
+              <li data='1'><span>大荔LNG加气站</span><span>235m</span><span>4248元/吨</span></li>
+              <li data='2'><span>大荔LNG加气站</span><span>235m</span><span>4248元/吨</span></li>
+              <li data='1'><span>大荔LNG加气站</span><span>235m</span><span>4248元/吨</span></li>
+              <li data='2'><span>大荔LNG加气站</span><span>235m</span><span>4248元/吨</span></li>
+              <li data='1'><span>大荔LNG加气站</span><span>235m</span><span>4248元/吨</span></li>
+              <li data='2'><span>大荔LNG加气站</span><span>235m</span><span>4248元/吨</span></li>
+              <li data='1'><span>大荔LNG加气站</span><span>235m</span><span>4248元/吨</span></li>
+              <li data='2'><span>大荔LNG加气站</span><span>235m</span><span>4248元/吨</span></li>
+              <li data='1'><span>大荔LNG加气站</span><span>235m</span><span>4248元/吨</span></li>
+              <li data='2'><span>大荔LNG加气站</span><span>235m</span><span>4248元/吨</span></li>
+              <li data='1'><span>大荔LNG加气站</span><span>235m</span><span>4248元/吨</span></li>
+              <li data='2'><span>大荔LNG加气站</span><span>235m</span><span>4248元/吨</span></li>
+              <li data='1'><span>大荔LNG加气站</span><span>235m</span><span>4248元/吨</span></li>
+              <li data='2'><span>大荔LNG加气站</span><span>235m</span><span>4248元/吨</span></li>
+              <li data='1'><span>大荔LNG加气站</span><span>235m</span><span>4248元/吨</span></li>
+              <li data='2'><span>大荔LNG加气站</span><span>235m</span><span>4248元/吨</span></li>
+              <li data='1'><span>大荔LNG加气站</span><span>235m</span><span>4248元/吨</span></li>
+              <li data='2'><span>大荔LNG加气站</span><span>235m</span><span>4248元/吨</span></li>
+              <li data='1'><span>大荔LNG加气站</span><span>235m</span><span>4248元/吨</span></li>
+              <li data='2'><span>大荔LNG加气站</span><span>235m</span><span>4248元/吨</span></li>
+              <li data='1'><span>大荔LNG加气站</span><span>235m</span><span>4248元/吨</span></li>
+              <li data='2'><span>大荔LNG加气站</span><span>235m</span><span>4248元/吨</span></li>
+              <li data='1'><span>大荔LNG加气站</span><span>235m</span><span>4248元/吨</span></li>
+              <li data='2'><span>大荔LNG加气站</span><span>235m</span><span>4248元/吨</span></li>
+              <li data='1'><span>大荔LNG加气站</span><span>235m</span><span>4248元/吨</span></li>
+              <li data='2'><span>大荔LNG加气站</span><span>235m</span><span>4248元/吨</span></li>
+              <li data='1'><span>大荔LNG加气站</span><span>235m</span><span>4248元/吨</span></li>
+              <li data='2'><span>大荔LNG加气站</span><span>235m</span><span>4248元/吨</span></li>
+              <li data='1'><span>大荔LNG加气站</span><span>235m</span><span>4248元/吨</span></li>
+              <li data='2'><span>大荔LNG加气站</span><span>235m</span><span>4248元/吨</span></li>
+              <li data='1'><span>大荔LNG加气站</span><span>235m</span><span>4248元/吨</span></li>
+              <li data='2'><span>大荔LNG加气站</span><span>235m</span><span>4248元/吨</span></li>
+              <li data='1'><span>大荔LNG加气站</span><span>235m</span><span>4248元/吨</span></li>
+              <li data='2'><span>大荔LNG加气站</span><span>235m</span><span>4248元/吨</span></li>
+              <li data='1'><span>大荔LNG加气站</span><span>235m</span><span>4248元/吨</span></li>
+              <li data='2'><span>大荔LNG加气站</span><span>235m</span><span>4248元/吨</span></li>
+              <li data='1'><span>大荔LNG加气站</span><span>235m</span><span>4248元/吨</span></li>
+              <li data='2'><span>大荔LNG加气站</span><span>235m</span><span>4248元/吨</span></li>
+              <li data='1'><span>大荔LNG加气站</span><span>235m</span><span>4248元/吨</span></li>
+              <li data='2'><span>大荔LNG加气站</span><span>235m</span><span>4248元/吨</span></li>
+              <li data='1'><span>大荔LNG加气站</span><span>235m</span><span>4248元/吨</span></li>
+              <li data='2'><span>大荔LNG加气站</span><span>235m</span><span>4248元/吨</span></li>
+              <li data='1'><span>大荔LNG加气站</span><span>235m</span><span>4248元/吨</span></li>
+              <li data='2'><span>大荔LNG加气站</span><span>235m</span><span>4248元/吨</span></li>
+              <li data='1'><span>大荔LNG加气站</span><span>235m</span><span>4248元/吨</span></li>
+              <li data='2'><span>大荔LNG加气站</span><span>235m</span><span>4248元/吨</span></li>
+              <li data='1'><span>大荔LNG加气站</span><span>235m</span><span>4248元/吨</span></li>
+              <li data='2'><span>大荔LNG加气站</span><span>235m</span><span>4248元/吨</span></li>
+              <li data='1'><span>大荔LNG加气站</span><span>235m</span><span>4248元/吨</span></li>
+              <li data='2'><span>大荔LNG加气站</span><span>235m</span><span>4248元/吨</span></li>
+              <li data='1'><span>大荔LNG加气站</span><span>235m</span><span>4248元/吨</span></li>
+              <li data='2'><span>大荔LNG加气站</span><span>235m</span><span>4248元/吨</span></li>
+              <li data='1'><span>大荔LNG加气站</span><span>235m</span><span>4248元/吨</span></li>
+              <li data='2'><span>大荔LNG加气站</span><span>235m</span><span>4248元/吨</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="../layui/layui.js"></script>
+  <script src="https://cdn.bootcss.com/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/echarts/4.2.1-rc.2/echarts.min.js"></script>
+  <script src="../js/jq_scroll.js"></script>
+  <script type="text/javascript" src="../js/china.js"></script>
+  <script type="text/javascript" src="../js/iconfont.js"></script>
+  <script type="text/javascript" src="../theme/purple-passion.js"></script>
+  <script type="text/javascript" src="../js/jquery.waypoints.min.js"></script>
+  <script type="text/javascript" src="../js/jquery.countup.min.js"></script>
+  <script type="text/javascript" src="../js/common.js"></script>
+  <script type="text/javascript" src="../js/management.js"></script>
+
+</body>
+
+</html>

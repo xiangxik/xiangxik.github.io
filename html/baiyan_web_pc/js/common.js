@@ -27,7 +27,7 @@ function remToPx(rem) {
   var px = $('html').css('font-size').replace('px', '');
   var pxInt = +px * rem;
   console.log(pxInt)
-  return pxInt + 'px';
+  return pxInt;
 
 }
 
@@ -111,22 +111,8 @@ function renderPie1() {
 }
 
 
-//加载通用的函数等
-function commonInit() {
-  renderBar1();
-  renderPie1();
-  //点击展开侧边栏
-  $('#siderBtn').click(function () {
-    let siderObj = $('#siderWrap');
-    if (siderObj.attr('data-visible') == 'false') {
-      siderObj.attr('data-visible', 'true');
-      siderObj.animate({ left: '0' });
-    } else {
-      siderObj.attr('data-visible', 'false');
-      siderObj.animate({ left: '-2.72rem' });
-    }
-  })
-
+//加载nav
+function navInit() {
   //菜单栏锁住
   $('#lockBtn').click(function () {
     let target = $('#nav');
@@ -136,6 +122,25 @@ function commonInit() {
     } else {
       target.css('top', '-0.44rem');
       target.addClass('nav_hover');
+    }
+  })
+}
+
+//加载通用的函数等
+function commonInit() {
+  renderBar1();
+  renderPie1();
+
+  navInit();
+  //点击展开侧边栏
+  $('#siderBtn').click(function () {
+    let siderObj = $('#siderWrap');
+    if (siderObj.attr('data-visible') == 'false') {
+      siderObj.attr('data-visible', 'true');
+      siderObj.animate({ left: '0' });
+    } else {
+      siderObj.attr('data-visible', 'false');
+      siderObj.animate({ left: '-2.72rem' });
     }
   })
 
