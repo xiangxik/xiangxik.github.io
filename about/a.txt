@@ -1,0 +1,75 @@
+    1  ll
+    2  apt-get install dnsmasq
+    3  vi /etc/dnsmasq.conf 
+    4  vi /etc/hosts
+    5  curl abc.com
+    6  service dnsmasq start
+    7  netstat -tunlp | grep 53
+    8  curl abc.com
+    9  ping abc.com
+   10  ufw
+   11  update-command-not-found
+   12  ufw disabled
+   13  vi /etc/hosts
+   14  service dnsmasq restart
+   15  ping www.baidu.com
+   16  vi /etc/dnsmasq.conf 
+   17  service dnsmasq restart
+   18  vi /etc/hosts
+   19  ping www.baidu.com
+   20  vi /etc/dnsmasq.hosts
+   21  service dnsmasq restart
+   22  vi /etc/dnsmasq.hosts
+   23  ping aa.com
+   24  ping www.baidu.com
+   25  service dnsmasq stop
+   26  sudo apt-get install bind9 dnsutils bind9-doc
+   27  vi /etc/dnsmasq.conf 
+   28  vi /etc/resolv.conf 
+   29  service dnsmasq start
+   30  cat /etc/dnsmasq.hosts 
+   31  ping aa.com
+   32  ping www.baidu.com
+   33  vi /etc/dnsmasq.hosts 
+   34  ping cc.com
+   35  service dnsmasq restart
+   36  ping cc.com
+   37  curl cc.com
+   38  wget cc.com
+   39  ll
+   40  cat index.html 
+   41  vi /etc/dnsmasq.hosts 
+   42  vi /etc/resolv.conf 
+   43  ping www.baidu.com
+   44  ping www.qq.com
+   45  netstat -r
+   46  cat /etc/dnsmasq.hosts 
+   47  vi /etc/dnsmasq.hosts 
+   48  service dnsmasq restart
+   49  ping www.biz-ebanking.hangseng.com
+   50  vi /etc/resolv.conf 
+   51  vi /etc/dnsmasq.conf 
+   52  service dnsmasq restart
+   53  ping aa.com
+   54  cat /etc/dnsmasq.hosts 
+   55  ping cc.com
+   56  wget cc.com
+   57  vi /etc/dnsmasq.conf 
+   58  service dnsmasq restart
+   59  cat /etc/resolv.conf 
+   60  service dnsmasq restart
+   61  cat /etc/dnsmasq.hosts 
+   62  ping cc.com
+   63  vi /etc/hosts
+   64  reboot now
+   65  netstat -tunlp |grep 53
+   66  cat /etc/dnsmasq.hosts 
+   67  cat index.html
+   68  vi /etc/dnsmasq.hosts 
+   69  service dnsmasq restart
+   70  vi /etc/dnsmasq.conf 
+   71  ll
+   72  cat index.html
+   73  history
+   74  history -> a.txt
+   75  history > a.txt
