@@ -1,0 +1,11 @@
+Due to the covid 2019, this year has been special that the time spent working from home can be much longer, but i don't think this reduced my work efficiency.
+Most of the time, my work is on BERI project. This project involves much components, and it's knowledge is new to us. It is hard to take, however, we can take up the BAU task and develop user's new requirements smoothly.
+I improved my technical skills much on BERI, i got two new develop language nodejs, reactjs, and I got new understanding about chatbot, and interesting in NLP.
+I completed the task 'RDP integration', then learn more about RDP,  familiar with its components PEGA and Celebrus. And this task need comunication with serval teams, that it improved my ability of presentation.
+Another major project is WeChat miniprogram MVP, it goes well so far, i think it can be released smoothly.
+For the targets set at the beginning of the year, the target 'Deliver BERI RDP' has been completed, now the function is running on production and no issues raised so far.
+For DevSecOps, i had passed Yellow Belt examine. With DevOps team's help, I learn to set up jenkins pipeline, write G3 scripts and  set up G3 release task. 
+I had built CI/CD pipeline for most components of BERI, and made BERI deployment standardizing. I am preparing CI/CD for WeChat miniprogram project too.
+For production support, I learn from teammate, and at the same time, shared to teammate production support process, every team members can be supported production now.
+For Production Defect, regrettably we make some issues on deploying BERI project, but i got some experiences to improve it, i think i can do better after.
+Next year I want to has a deep understanding of full-stack encompassing Chatbot, for the new requirements i can provides reasonable timeline estimates. 
